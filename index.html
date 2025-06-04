@@ -10,11 +10,16 @@
   <header>
     <nav class="navbar">
       <div class="logo">Pulseras Femeninas</div>
+      <select id="language-selector" style="margin-left:20px;">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="ca">Català</option>
+      </select>
       <div class="nav-links">
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="acerca.html">Acerca de Nosotros</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="index.html" id="nav-inicio">Inicio</a>
+        <a href="productos.html" id="nav-productos">Productos</a>
+        <a href="acerca.html" id="nav-acerca">Acerca de Nosotros</a>
+        <a href="contacto.html" id="nav-contacto">Contacto</a>
       </div>
     </nav>
   </header>
@@ -26,34 +31,34 @@
       Tu navegador no soporta el video HTML5.
     </video>
     <div class="banner-texto">
-      <h1>Pulseras hechas con amor</h1>
-      <p>Descubre nuestra colección única para mujeres auténticas.</p>
-      <a class="boton" href="productos.html">Ver Productos</a>
+      <h1 id="banner-title">Pulseras hechas con amor</h1>
+      <p id="banner-desc">Descubre nuestra colección única para mujeres auténticas.</p>
+      <a class="boton" href="productos.html" id="banner-btn">Ver Productos</a>
     </div>
   </section>
 
   <!-- Productos destacados -->
   <section class="productos-destacados">
-    <h2>Productos Destacados</h2>
+    <h2 id="productos-destacados-title">Productos Destacados</h2>
     <div class="productos">
       <div class="producto">
         <img src="pulsera1.jpg" alt="Pulsera Elegante">
-        <h3>Pulsera Elegante</h3>
-        <p>Pulsera de perlas y dijes plateados.</p>
+        <h3 id="producto1-title">Pulsera Elegante</h3>
+        <p id="producto1-desc">Pulsera de perlas y dijes plateados.</p>
         <span>$15.000</span>
         <a class="comprar-btn" href="productos.html">Comprar</a>
       </div>
       <div class="producto">
         <img src="pulsera2.jpg" alt="Pulsera Colorida">
-        <h3>Pulsera Colorida</h3>
-        <p>Pulsera con cuentas multicolor.</p>
+        <h3 id="producto2-title">Pulsera Colorida</h3>
+        <p id="producto2-desc">Pulsera con cuentas multicolor.</p>
         <span>$12.000</span>
         <a class="comprar-btn" href="productos.html">Comprar</a>
       </div>
       <div class="producto">
         <img src="pulsera3.jpg" alt="Pulsera Minimalista">
-        <h3>Pulsera Minimalista</h3>
-        <p>Pulsera fina de hilo rojo con dije de corazón.</p>
+        <h3 id="producto3-title">Pulsera Minimalista</h3>
+        <p id="producto3-desc">Pulsera fina de hilo rojo con dije de corazón.</p>
         <span>$10.000</span>
         <a class="comprar-btn" href="productos.html">Comprar</a>
       </div>
@@ -62,25 +67,116 @@
 
   <!-- Reseñas -->
   <section class="resenas">
-    <h2>Experiencias de Nuestras Compradoras</h2>
+    <h2 id="resenas-title">Experiencias de Nuestras Compradoras</h2>
     <div class="resenas-lista">
       <div class="resena">
-        <p>"¡Me encantó la calidad y el diseño! Volveré a comprar."</p>
+        <p id="resena1">"¡Me encantó la calidad y el diseño! Volveré a comprar."</p>
         <span>- Ana M.</span>
       </div>
       <div class="resena">
-        <p>"La atención fue excelente y la pulsera llegó muy rápido."</p>
+        <p id="resena2">"La atención fue excelente y la pulsera llegó muy rápido."</p>
         <span>- Laura V.</span>
       </div>
       <div class="resena">
-        <p>"Hermosas pulseras, perfectas para regalar."</p>
+        <p id="resena3">"Hermosas pulseras, perfectas para regalar."</p>
         <span>- Sofía R.</span>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Pulseras Femeninas. Todos los derechos reservados.</p>
+    <p id="footer-text">&copy; 2025 Pulseras Femeninas. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+const translations = {
+  es: {
+    "nav-inicio": "Inicio",
+    "nav-productos": "Productos",
+    "nav-acerca": "Acerca de Nosotros",
+    "nav-contacto": "Contacto",
+    "banner-title": "Pulseras hechas con amor",
+    "banner-desc": "Descubre nuestra colección única para mujeres auténticas.",
+    "banner-btn": "Ver Productos",
+    "productos-destacados-title": "Productos Destacados",
+    "producto1-title": "Pulsera Elegante",
+    "producto1-desc": "Pulsera de perlas y dijes plateados.",
+    "producto2-title": "Pulsera Colorida",
+    "producto2-desc": "Pulsera con cuentas multicolor.",
+    "producto3-title": "Pulsera Minimalista",
+    "producto3-desc": "Pulsera fina de hilo rojo con dije de corazón.",
+    "comprar-btn": "Comprar",
+    "resenas-title": "Experiencias de Nuestras Compradoras",
+    "resena1": "\"¡Me encantó la calidad y el diseño! Volveré a comprar.\"",
+    "resena2": "\"La atención fue excelente y la pulsera llegó muy rápido.\"",
+    "resena3": "\"Hermosas pulseras, perfectas para regalar.\"",
+    "footer-text": "&copy; 2025 Pulseras Femeninas. Todos los derechos reservados."
+  },
+  en: {
+    "nav-inicio": "Home",
+    "nav-productos": "Products",
+    "nav-acerca": "About Us",
+    "nav-contacto": "Contact",
+    "banner-title": "Bracelets made with love",
+    "banner-desc": "Discover our unique collection for authentic women.",
+    "banner-btn": "See Products",
+    "productos-destacados-title": "Featured Products",
+    "producto1-title": "Elegant Bracelet",
+    "producto1-desc": "Bracelet with pearls and silver charms.",
+    "producto2-title": "Colorful Bracelet",
+    "producto2-desc": "Bracelet with multicolor beads.",
+    "producto3-title": "Minimalist Bracelet",
+    "producto3-desc": "Thin red string bracelet with heart charm.",
+    "comprar-btn": "Buy",
+    "resenas-title": "Our Customers' Experiences",
+    "resena1": "\"I loved the quality and design! Will buy again.\"",
+    "resena2": "\"Excellent service and the bracelet arrived very quickly.\"",
+    "resena3": "\"Beautiful bracelets, perfect as gifts.\"",
+    "footer-text": "&copy; 2025 Feminine Bracelets. All rights reserved."
+  },
+  ca: {
+    "nav-inicio": "Inici",
+    "nav-productos": "Productes",
+    "nav-acerca": "Sobre Nosaltres",
+    "nav-contacto": "Contacte",
+    "banner-title": "Polseres fetes amb amor",
+    "banner-desc": "Descobreix la nostra col·lecció única per a dones autèntiques.",
+    "banner-btn": "Veure Productes",
+    "productos-destacados-title": "Productes Destacats",
+    "producto1-title": "Polsera Elegant",
+    "producto1-desc": "Polsera de perles i penjolls platejats.",
+    "producto2-title": "Polsera Colorida",
+    "producto2-desc": "Polsera amb comptes multicolor.",
+    "producto3-title": "Polsera Minimalista",
+    "producto3-desc": "Polsera fina de fil vermell amb penjoll de cor.",
+    "comprar-btn": "Comprar",
+    "resenas-title": "Experiències de les Nostres Compradores",
+    "resena1": "\"M'ha encantat la qualitat i el disseny! Tornaré a comprar.\"",
+    "resena2": "\"L'atenció ha estat excel·lent i la polsera va arribar molt ràpid.\"",
+    "resena3": "\"Polseres precioses, perfectes per regalar.\"",
+    "footer-text": "&copy; 2025 Polseres Femenines. Tots els drets reservats."
+  }
+};
+
+function updateTexts(lang) {
+  for (const key in translations[lang]) {
+    const el = document.getElementById(key);
+    if (el) {
+      el.innerHTML = translations[lang][key];
+    }
+  }
+  // Cambiar textos de todos los botones de comprar
+  document.querySelectorAll(".comprar-btn").forEach(btn => {
+    btn.textContent = translations[lang]["comprar-btn"];
+  });
+}
+
+document.getElementById('language-selector').addEventListener('change', function() {
+  updateTexts(this.value);
+});
+
+// Inicializar al cargar
+updateTexts('es');
+  </script>
 </body>
 </html>
