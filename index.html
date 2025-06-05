@@ -6,19 +6,27 @@
   <title>LaluPulseras</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Barra superior -->
+  <!-- Barra superior con iconos alineados a la izquierda -->
   <div class="topbar">
     <div class="topbar-left">
-      <select class="idioma">
+      <select class="idioma" title="Idioma">
         <option value="es">ES</option>
         <option value="en">EN</option>
         <option value="ca">CA</option>
       </select>
-      <a href="#" class="topbar-link">Iniciar sesión</a>
-      <a href="#" class="topbar-link" title="Lista de deseos">🤍</a>
-      <a href="#" class="topbar-link" title="Carrito">🛒</a>
+      <a href="#" class="topbar-link" title="Iniciar sesión">
+        <i class="fa-regular fa-user"></i> <span class="hide-on-mobile">Iniciar sesión</span>
+      </a>
+      <a href="#" class="topbar-link" title="Lista de deseos">
+        <i class="fa-regular fa-heart"></i>
+      </a>
+      <a href="#" class="topbar-link" title="Carrito">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
     </div>
   </div>
 
@@ -27,12 +35,12 @@
     <nav class="navbar">
       <form class="buscador">
         <input type="text" placeholder="Buscar productos...">
-        <button type="submit">🔍</button>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
       <ul class="menu">
         <li><a href="#">Inicio</a></li>
         <li class="submenu">
-          <a href="#">Productos ▼</a>
+          <a href="#">Productos <i class="fa-solid fa-chevron-down"></i></a>
           <ul>
             <li><a href="#">Anillos</a></li>
             <li><a href="#">Collares</a></li>
@@ -81,69 +89,21 @@
   <section class="productos-destacados">
     <h2>Productos Destacados</h2>
     <div class="slider">
-      <button class="slider-btn prev">&#8592;</button>
+      <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
       <div class="slider-items">
         <div class="producto">
           <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=200&q=80" alt="Pulsera Elegante">
           <h3>Pulsera Elegante</h3>
           <p>Pulsera de perlas y dijes plateados.</p>
           <span>$15.000</span>
-          <button class="comprar-btn">Añadir al carrito</button>
+          <button class="comprar-btn"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
         </div>
         <div class="producto">
           <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=200&q=80" alt="Collar Bohemio">
           <h3>Collar Bohemio</h3>
           <p>Collar con abalorios coloridos y dije de estrella.</p>
           <span>$20.000</span>
-          <button class="comprar-btn">Añadir al carrito</button>
+          <button class="comprar-btn"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
         </div>
         <div class="producto">
-          <img src="https://images.unsplash.com/photo-1475189778702-5ec9941484ae?auto=format&fit=facearea&w=200&q=80" alt="Anillo Minimal">
-          <h3>Anillo Minimal</h3>
-          <p>Anillo ajustable con baño de plata.</p>
-          <span>$8.000</span>
-          <button class="comprar-btn">Añadir al carrito</button>
-        </div>
-        <div class="producto">
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=200&q=80" alt="Pendientes Ibiza">
-          <h3>Pendientes Ibiza</h3>
-          <p>Pendientes largos con colores vibrantes.</p>
-          <span>$12.000</span>
-          <button class="comprar-btn">Añadir al carrito</button>
-        </div>
-      </div>
-      <button class="slider-btn next">&#8594;</button>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 LaluPulseras. Todos los derechos reservados.</p>
-  </footer>
-
-  <script>
-    // Slider simple JS
-    const slider = document.querySelector('.slider-items');
-    const prevBtn = document.querySelector('.slider-btn.prev');
-    const nextBtn = document.querySelector('.slider-btn.next');
-    let slideIndex = 0;
-
-    function showSlide(index) {
-      const items = document.querySelectorAll('.slider-items .producto');
-      items.forEach((item, i) => {
-        item.style.display = (i >= index && i < index + 3) ? 'flex' : 'none';
-      });
-    }
-    showSlide(slideIndex);
-
-    prevBtn.onclick = () => {
-      if (slideIndex > 0) slideIndex--;
-      showSlide(slideIndex);
-    };
-    nextBtn.onclick = () => {
-      const items = document.querySelectorAll('.slider-items .producto');
-      if (slideIndex + 3 < items.length) slideIndex++;
-      showSlide(slideIndex);
-    };
-  </script>
-</body>
-</html>
+          <img src="https://images.unsplash.com/photo-1475189778702
