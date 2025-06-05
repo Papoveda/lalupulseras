@@ -386,3 +386,51 @@ footer {
     font-size: 1.05rem;
   }
 }
+.banner-video {
+  position: relative;
+  width: 100vw;
+  height: 340px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-video video {
+  width: 100vw;
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+.banner-video-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+.banner-video-content h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.23);
+}
+.banner-video-content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.22);
+}
+
+@media (max-width: 700px) {
+  .banner-video, .banner-video video {
+    height: 180px;
+  }
+  .banner-video-content h1 {
+    font-size: 1.4rem;
+  }
+  .banner-video-content p {
+    font-size: 1rem;
+  }
+}
