@@ -122,3 +122,22 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+// Mostrar/ocultar el menú de idiomas al hacer clic en la bandera
+const idiomaDropdown = document.querySelector('.idioma-dropdown');
+const idiomaBtn = document.getElementById('idioma-btn-principal');
+
+if (idiomaBtn && idiomaDropdown) {
+  idiomaBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    idiomaDropdown.classList.toggle('active');
+  });
+  document.addEventListener('click', function(e) {
+    if (idiomaDropdown.classList.contains('active')) {
+      idiomaDropdown.classList.remove('active');
+    }
+  });
+  // Evita que se cierre al hacer clic dentro del menú
+  idiomaDropdown.querySelector('.dropdown-content').addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+}
