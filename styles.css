@@ -397,7 +397,7 @@ footer {
 }
 .banner-video video {
   width: 100vw;
-  height: 340px;
+  height: 500px;
   object-fit: cover;
   object-position: center;
   position: absolute;
