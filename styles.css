@@ -554,25 +554,17 @@ footer {
 
 /* Fondo para cada categoría */
 .categoria-cuadrada.anillos {
-  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/pulseras.jpg');
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/anillos.jpg');
 }
 .categoria-cuadrada.collares {
-  background-image: url('media/anillos.jpg');
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/collares.jpg');
 }
 .categoria-cuadrada.pulseras {
-  background-image: url('media/anillos.jpg');
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/pulseras.jpg');
 }
 .categoria-cuadrada.pendientes {
-  background-image: url('media/anillos.jpg');
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/pendientes.jpg');
 }
 .categoria-cuadrada.tobilleras {
-  background-image: url('media/anillos.jpg');
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/tobilleras.jpg');
 }
-
-
-
-
-
-
-
-
