@@ -19,13 +19,26 @@
     </script>
     <!-- Barra superior con logo, menú y opciones -->
     <nav class="navbar">
-      <div class="navbar-logo">
-        <!-- Logo de referencia, reemplaza el src cuando tengas tu logo -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Logo LaluPulseras" />
+      <div class="navbar-left">
+        <button class="icon-btn" title="Iniciar sesión">
+          <i class="fa-regular fa-user"></i>
+        </button>
+        <div class="navbar-logo">
+          <!-- Cambia esta imagen por tu logo -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Logo LaluPulseras" />
+        </div>
       </div>
       <ul class="navbar-menu">
         <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
+        <li class="menu-productos">
+          <a href="#">Productos <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="submenu">
+            <li><a href="#">Collares</a></li>
+            <li><a href="#">Pulseras</a></li>
+            <li><a href="#">Pendientes</a></li>
+            <li><a href="#">Anillos</a></li>
+          </ul>
+        </li>
         <li><a href="#">Acerca de</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>
@@ -46,6 +59,7 @@
         <button class="icon-btn" title="Deseos">
           <i class="fa-regular fa-heart"></i>
         </button>
+        <!-- Icono de iniciar sesión también en el menú derecho -->
         <button class="icon-btn" title="Iniciar sesión">
           <i class="fa-regular fa-user"></i>
         </button>
