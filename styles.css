@@ -26,8 +26,8 @@ body {
   gap: 20px;
 }
 .navbar-logo img {
-  height: 90px;
-  width: 90px;
+  height: 70px;
+  width: 70px;
   object-fit: contain;
   display: block;
 }
@@ -35,7 +35,7 @@ body {
   background: transparent;
   border: none;
   color: #fc6fc0;
-  font-size: 1rem;
+  font-size: 2rem;
   padding: 8px;
   border-radius: 50%;
   cursor: pointer;
