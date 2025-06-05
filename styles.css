@@ -79,7 +79,8 @@ a { color: inherit; }
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.4rem; /* hace que los iconos estén más juntos */
+  margin-left: 2.5rem; /* más espacio respecto al menú principal */
 }
 .icon-btn {
   background: none;
