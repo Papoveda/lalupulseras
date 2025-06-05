@@ -87,4 +87,38 @@ document.addEventListener("DOMContentLoaded", function() {
     showReseña(reseñaIndex);
     setInterval(nextReseña, 4500);
   }
+
+  // Cambiar bandera al elegir idioma (NUEVO)
+  const banderaPrincipal = document.getElementById("bandera-principal");
+  const idiomaOpciones = document.querySelectorAll(".idioma-opcion");
+
+  idiomaOpciones.forEach(function(btn) {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      const nuevaBandera = btn.getAttribute("data-bandera");
+      if(banderaPrincipal && nuevaBandera) {
+        banderaPrincipal.src = nuevaBandera;
+      }
+    });
+  });
+
+  // Opcional: cerrar dropdown de idioma en móviles tras seleccionar idioma
+  idiomaOpciones.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      const dropdown = btn.closest(".dropdown-content");
+      if(dropdown) dropdown.style.display = "none";
+    });
+  });
+
+  // Menu hamburguesa: cerrar menú al hacer click en un link o icono (UX extra)
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenuLinks = document.querySelectorAll('.navbar-menu a, .navbar-actions .icon-btn');
+  navMenuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if(window.innerWidth < 800 && navToggle && navToggle.checked) {
+        navToggle.checked = false;
+      }
+    });
+  });
+
 });
