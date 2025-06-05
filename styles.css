@@ -107,17 +107,25 @@ a { color: inherit; }
   border: 1px solid #ddd;
   margin-right: 0.2em;
 }
+.idioma-dropdown {
+  position: relative; /* Esto es CLAVE */
+  display: inline-block;
+}
+
 .idioma-dropdown .dropdown-content {
   display: none;
   position: absolute;
+  top: 110%; /* justo debajo del botón */
+  left: 50%;
+  transform: translateX(-50%);
   background: #fff;
   min-width: 44px;
   z-index: 15;
-  right: 0;
   box-shadow: 0 2px 12px rgba(0,0,0,0.13);
   border-radius: 8px;
   overflow: hidden;
 }
+
 .idioma-dropdown.active .dropdown-content {
   display: block;
 }
