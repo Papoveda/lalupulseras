@@ -9,203 +9,122 @@
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-      /* NUEVA SECCIÓN TARJETAS CUADRADAS */
-      .categorias.tarjetas-cuadradas {
+      .categorias.tarjetas-modernas {
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
         justify-content: center;
         margin-top: 2rem;
       }
-      .categoria-tarjeta {
-        background: #fff;
-        border: 3px solid #ff69b4; /* Rosa */
-        border-radius: 16px;
-        box-shadow: 0 6px 18px rgba(255, 105, 180, 0.15), 0 1.5px 4px rgba(0,0,0,0.07);
-        width: 180px;
-        min-height: 260px;
+      .categoria-tarjeta.moderna {
+        position: relative;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
-        cursor: pointer;
+        align-items: flex-end;
+        justify-content: center;
+        width: 200px;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        border-radius: 18px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.17);
+        overflow: hidden;
+        text-decoration: none;
+        transition: transform 0.25s cubic-bezier(.25,.8,.25,1), box-shadow 0.22s;
         margin-bottom: 1rem;
+        cursor: pointer;
       }
-      .categoria-tarjeta img {
-        width: 100%;
-        height: 140px;
-        object-fit: cover;
-        border-top-left-radius: 13px;
-        border-top-right-radius: 13px;
+      .categoria-tarjeta.moderna::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(30,30,30,0.6) 60%, rgba(0,0,0,0.1) 100%);
+        z-index: 1;
+        transition: background 0.22s;
       }
-      .categoria-tarjeta span {
-        margin: 1.2rem 0 0.7rem 0;
-        font-size: 1.1em;
+      .categoria-tarjeta.moderna span {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        font-size: 1.18em;
         font-weight: bold;
-        color: #ff69b4;
         letter-spacing: 1px;
+        margin-bottom: 22px;
+        padding: 7px 22px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.13);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(255,255,255,0.18);
+        text-shadow: 0 1px 6px rgba(0,0,0,0.18);
       }
-      .categoria-tarjeta:hover {
-        transform: translateY(-8px) scale(1.04);
-        box-shadow: 0 12px 28px rgba(255,105,180,0.25), 0 3px 10px rgba(0,0,0,0.10);
-        border-color: #e75480; /* Rosa más intenso al hacer hover */
+      .categoria-tarjeta.moderna:hover, .categoria-tarjeta.moderna:focus {
+        transform: translateY(-9px) scale(1.045);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.25), 0 3px 18px rgba(0,0,0,0.10);
+      }
+      .categoria-tarjeta.moderna:hover::before, .categoria-tarjeta.moderna:focus::before {
+        background: linear-gradient(to top, rgba(255,105,180,0.4) 50%, rgba(0,0,0,0.1) 100%);
       }
       @media (max-width: 900px) {
-        .categorias.tarjetas-cuadradas {
+        .categorias.tarjetas-modernas {
           gap: 1rem;
         }
-        .categoria-tarjeta {
+        .categoria-tarjeta.moderna {
           width: 46vw;
           max-width: 250px;
+          height: 180px;
         }
       }
       @media (max-width: 600px) {
-        .categorias.tarjetas-cuadradas {
+        .categorias.tarjetas-modernas {
           flex-direction: column;
           align-items: center;
         }
-        .categoria-tarjeta {
+        .categoria-tarjeta.moderna {
           width: 90vw;
           max-width: 350px;
+          height: 160px;
         }
       }
     </style>
   </head>
   <body>
-    <script>
-      function cambiarIdioma(idioma, banderaUrl) {
-        document.getElementById('bandera-idioma').src = banderaUrl;
-        document.getElementById('bandera-idioma').alt = idioma.toUpperCase();
-      }
-    </script>
     <nav class="navbar">
-      <div class="navbar-left">
-        <div class="navbar-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Logo LaluPulseras" />
-        </div>
-      </div>
-      <ul class="navbar-menu">
-        <li><a href="#">Inicio</a></li>
-        <li class="menu-productos">
-          <a href="#">Productos <i class="fa-solid fa-caret-down"></i></a>
-          <ul class="submenu">
-            <li><a href="#">Collares</a></li>
-            <li><a href="#">Pulseras</a></li>
-            <li><a href="#">Pendientes</a></li>
-            <li><a href="#">Anillos</a></li>
-            <li><a href="#">Tobilleras</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Acerca de</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-      <div class="navbar-actions">
-        <button class="icon-btn" title="Buscar">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <div class="idioma-dropdown">
-          <button class="icon-btn idioma-btn" title="Idioma">
-            <img src="https://flagcdn.com/es.svg" class="bandera" id="bandera-idioma" alt="ES" />
-          </button>
-          <div class="dropdown-content">
-            <button onclick="cambiarIdioma('es','https://flagcdn.com/es.svg')">
-              <img src="https://flagcdn.com/es.svg" class="bandera" alt="ES" />
-            </button>
-            <button onclick="cambiarIdioma('en','https://flagcdn.com/gb.svg')">
-              <img src="https://flagcdn.com/gb.svg" class="bandera" alt="EN" />
-            </button>
-            <button onclick="cambiarIdioma('ca','https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg')">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg" class="bandera" alt="CA" />
-            </button>
-          </div>
-        </div>
-        <button class="icon-btn" title="Lista de deseos">
-          <i class="fa-regular fa-heart"></i>
-        </button>
-        <button class="icon-btn" title="Carrito">
-          <i class="fa-solid fa-bag-shopping"></i>
-        </button>
-        <button class="icon-btn" title="Iniciar sesión">
-          <i class="fa-regular fa-user"></i>
-        </button>
-      </div>
+      <!-- ... tu navbar aquí ... -->
     </nav>
 
-    <!-- Banner de video antes de Nuestros productos -->
     <section class="banner-video">
-      <video autoplay muted loop playsinline>
-        <source src="media/lalupulseras-banner.mp4" type="video/mp4">
-        Tu navegador no soporta el video HTML5.
-      </video>
-      <div class="banner-video-content">
-        <h1>¡Bienvenid@ a LaluPulseras!</h1>
-        <p>Descubre la magia de la bisutería hecha a mano</p>
-      </div>
+      <!-- ... tu banner aquí ... -->
     </section>
 
-    <!-- SECCIÓN MEJORADA DE NUESTROS PRODUCTOS -->
+    <!-- SECCIÓN MODERNA DE NUESTROS PRODUCTOS -->
     <section class="nuestros-productos">
       <h2>Nuestros productos</h2>
-      <div class="categorias tarjetas-cuadradas">
-        <div class="categoria-tarjeta">
-          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Anillos">
+      <div class="categorias tarjetas-modernas">
+        <a class="categoria-tarjeta moderna" href="anillos.html" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80');">
           <span>Anillos</span>
-        </div>
-        <div class="categoria-tarjeta">
-          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Collares">
+        </a>
+        <a class="categoria-tarjeta moderna" href="collares.html" style="background-image: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80');">
           <span>Collares</span>
-        </div>
-        <div class="categoria-tarjeta">
-          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Pulseras">
+        </a>
+        <a class="categoria-tarjeta moderna" href="pulseras.html" style="background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80');">
           <span>Pulseras</span>
-        </div>
-        <div class="categoria-tarjeta">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Pendientes">
+        </a>
+        <a class="categoria-tarjeta moderna" href="pendientes.html" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80');">
           <span>Pendientes</span>
-        </div>
-        <div class="categoria-tarjeta">
-          <img src="https://images.unsplash.com/photo-1513105737057-123c1bca2dce?auto=format&fit=crop&w=600&q=80" alt="Tobilleras">
+        </a>
+        <a class="categoria-tarjeta moderna" href="tobilleras.html" style="background-image: url('https://images.unsplash.com/photo-1513105737057-123c1bca2dce?auto=format&fit=crop&w=600&q=80');">
           <span>Tobilleras</span>
-        </div>
+        </a>
       </div>
     </section>
 
     <section class="banner-dreams">
-      <div class="banner-content">
-        <h1>Colección Dreams Ibiza</h1>
-        <p>Joyería artesanal llena de color y energía positiva</p>
-      </div>
+      <!-- ... tu banner dreams ... -->
     </section>
 
     <section class="productos-destacados">
-      <h2>Productos Destacados</h2>
-      <div class="slider">
-        <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
-        <div class="slider-items">
-          <div class="producto">
-            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=200&q=80" alt="Pulsera Elegante">
-            <h3>Pulsera Elegante</h3>
-            <p>Pulsera de perlas y dijes plateados.</p>
-            <span>$15.000</span>
-            <button class="comprar-btn"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
-          </div>
-          <div class="producto">
-            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=200&q=80" alt="Collar Bohemio">
-            <h3>Collar Bohemio</h3>
-            <p>Collar con abalorios coloridos y dije de estrella.</p>
-            <span>$20.000</span>
-            <button class="comprar-btn"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
-          </div>
-          <div class="producto">
-            <img src="https://images.unsplash.com/photo-1475189778702-5ec9941484c6?auto=format&fit=facearea&w=200&q=80" alt="Pendientes Luna">
-            <h3>Pendientes Luna</h3>
-            <p>Pendientes con forma de luna y piedras azules.</p>
-            <span>$13.000</span>
-            <button class="comprar-btn"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
-          </div>
-        </div>
-        <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
+      <!-- ... tus productos destacados ... -->
     </section>
 
     <footer>
