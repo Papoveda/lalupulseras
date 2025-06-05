@@ -87,7 +87,6 @@ html, body {
   gap: 12px;
 }
 
-/* Iconos derecha más pequeños */
 .icon-btn {
   background: none;
   border: none;
@@ -214,37 +213,83 @@ html, body {
 
 .categorias {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 42px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 0 2vw;
+  overflow-x: auto;
+}
+
+.categorias::-webkit-scrollbar {
+  display: none;
 }
 
 .categoria {
+  position: relative;
+  flex: 1 1 0;
+  max-width: 240px;
+  min-width: 180px;
+  aspect-ratio: 4/3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 160px;
+  margin: 0 8px;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-  padding: 18px 0 10px 0;
-  transition: transform 0.14s;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
 }
 .categoria:hover {
-  transform: translateY(-7px) scale(1.06);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
 }
 
 .categoria img {
-  width: 92px;
-  height: 92px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 14px;
+  border-radius: 18px;
+  transition: filter 0.3s;
+  filter: brightness(0.80);
+  display: block;
 }
+
 .categoria span {
-  font-weight: 600;
-  font-size: 1.1rem;
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.17rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0,0,0,0.36), rgba(0,0,0,0.11) 60%, transparent 100%);
+  padding: 10px 0 4px 0;
+  letter-spacing: 1px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  z-index: 2;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+/* Efecto hover: nombre al centro, grande */
+.categoria:hover span {
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 1.7rem;
+  background: rgba(0,0,0,0.60);
+  padding: 14px 0 10px 0;
+  border-radius: 12px;
+  width: 90%;
+  letter-spacing: 2px;
+}
+
+.categoria:hover img {
+  filter: brightness(0.5) blur(1px);
 }
 
 /* Banner Dreams */
@@ -384,7 +429,13 @@ footer {
     gap: 12px;
   }
   .categorias {
-    gap: 20px;
+    gap: 16px;
+    padding: 0 4vw;
+  }
+  .categoria {
+    min-width: 140px;
+    max-width: 180px;
+    aspect-ratio: 4/3;
   }
   .slider-items {
     gap: 8px;
@@ -421,5 +472,14 @@ footer {
   .navbar-menu {
     gap: 6px;
     font-size: 0.98rem;
+  }
+  .categorias {
+    gap: 7px;
+    padding: 0 2vw;
+  }
+  .categoria {
+    min-width: 110px;
+    max-width: 140px;
+    aspect-ratio: 4/3;
   }
 }
