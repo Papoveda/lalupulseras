@@ -13,30 +13,45 @@
 
   <!-- Menú Principal -->
   <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="media/logo.png" alt="LaluPulseras logo">
+  <div class="navbar-logo">
+    <img src="media/logo.png" alt="LaluPulseras logo">
+  </div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <ul class="navbar-menu">
+    <li><a href="#">Inicio</a></li>
+    <li class="menu-productos">
+      <a href="#">Productos <i class="fas fa-chevron-down"></i></a>
+      <ul class="submenu">
+        <li><a href="#">Anillos</a></li>
+        <li><a href="#">Collares</a></li>
+        <li><a href="#">Pulseras</a></li>
+        <li><a href="#">Pendientes</a></li>
+        <li><a href="#">Tobilleras</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Colecciones</a></li>
+    <li><a href="#">Reseñas</a></li>
+    <li><a href="#">Contacto</a></li>
+  </ul>
+  <div class="navbar-actions">
+    <button class="icon-btn" title="Buscar"><i class="fas fa-search"></i></button>
+    <div class="idioma-dropdown">
+      <button class="icon-btn idioma-btn" title="Seleccionar idioma">
+        <img class="bandera" src="https://hatscripts.github.io/circle-flags/flags/es.svg" alt="Español">
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <button title="Español"><img class="bandera" src="https://hatscripts.github.io/circle-flags/flags/es.svg" alt="Español"></button>
+        <button title="English"><img class="bandera" src="https://hatscripts.github.io/circle-flags/flags/gb.svg" alt="English"></button>
+        <button title="Català"><img class="bandera" src="https://hatscripts.github.io/circle-flags/flags/cat.svg" alt="Català"></button>
+      </div>
     </div>
-    <ul class="navbar-menu">
-      <li><a href="#">Inicio</a></li>
-      <li class="menu-productos">
-        <a href="#">Productos <i class="fas fa-chevron-down" style="font-size:0.85em"></i></a>
-        <ul class="submenu">
-          <li><a href="#">Anillos</a></li>
-          <li><a href="#">Collares</a></li>
-          <li><a href="#">Pulseras</a></li>
-          <li><a href="#">Pendientes</a></li>
-          <li><a href="#">Tobilleras</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Colecciones</a></li>
-      <li><a href="#">Reseñas</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-    <div class="navbar-actions">
-      <a href="#" title="Carrito" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
-      <a href="#" title="Usuario" class="icon-btn"><i class="fas fa-user"></i></a>
-    </div>
-  </nav>
+    <button class="icon-btn" title="Lista de deseos"><i class="fas fa-heart"></i></button>
+    <button class="icon-btn" title="Carrito"><i class="fas fa-shopping-bag"></i></button>
+    <button class="icon-btn" title="Iniciar sesión"><i class="fas fa-user"></i></button>
+  </div>
+  <label for="nav-toggle" class="nav-hamburger"><span></span><span></span><span></span></label>
+</nav>
 
   <!-- Banner de video -->
   <section class="banner-video">
