@@ -1,106 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LaluPulseras</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaluPulseras</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      body {
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: #fff7fa;
+        margin: 0;
+        color: #3a3a3a;
+      }
+      .navbar {
+        width: 100vw;
+        height: 58px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 10px rgba(252,112,111,0.06);
+        border-bottom: 1.5px solid #e9e9e9;
+        font-family: 'Montserrat', Arial, sans-serif;
+        padding: 0 3vw;
+        z-index: 100;
+        position: relative;
+        gap: 2vw;
+      }
+      .navbar-logo img {
+        height: 38px;
+        object-fit: contain;
+      }
+      .navbar-menu {
+        display: flex;
+        gap: 2vw;
+        margin: 0 0 0 2vw;
+        padding: 0;
+        list-style: none;
+        flex: 1;
+      }
+      .navbar-menu li a {
+        color: #fc6fc0;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.09rem;
+        letter-spacing: 0.5px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        transition: background 0.15s, color 0.15s;
+      }
+      .navbar-menu li a:hover {
+        background: #fcf1fa;
+        color: #fc706f;
+      }
+      .navbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+      }
+      .icon-btn {
+        background: transparent;
+        border: none;
+        color: #fc6fc0;
+        font-size: 1.25rem;
+        padding: 8px;
+        margin: 0 2px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.15s, color 0.15s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .icon-btn:hover, .icon-btn:focus {
+        background: #fcf1fa;
+        color: #fc706f;
+      }
+      .bandera {
+        width: 21px;
+        height: 15px;
+        object-fit: cover;
+        border-radius: 2.5px;
+        border: 1px solid #eee;
+      }
+      .idioma-dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .idioma-dropdown .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 120%;
+        background: #fff;
+        min-width: 40px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+        border-radius: 7px;
+        z-index: 200;
+        padding: 6px 3px;
+      }
+      .idioma-dropdown:hover .dropdown-content,
+      .idioma-dropdown:focus-within .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .idioma-dropdown .dropdown-content button {
+        background: transparent;
+        border: none;
+        padding: 3px 7px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .idioma-dropdown .dropdown-content button:hover {
+        background: #fcf1fa;
+      }
+      /* Responsive */
+      @media (max-width: 750px) {
+        .navbar-menu {
+          gap: 10px;
+          font-size: 0.98rem;
+        }
+        .navbar-actions {
+          gap: 0.5vw;
+        }
+        .navbar-logo img {
+          height: 30px;
+        }
+      }
+      @media (max-width: 520px) {
+        .navbar {
+          flex-direction: column;
+          height: auto;
+          gap: 0;
+          padding: 0 1vw;
+        }
+        .navbar-menu {
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: 0;
+          gap: 6px;
+        }
+        .navbar-actions {
+          margin-bottom: 5px;
+        }
+      }
+      /* Puedes seguir usando tu CSS actual para el resto de la página */
+    </style>
   </head>
-<body>
-<script>
-function cambiarIdioma(idioma, banderaUrl) {
-  document.getElementById('bandera-idioma').src = banderaUrl;
-  document.getElementById('bandera-idioma').alt = idioma.toUpperCase();
-  // Aquí podrías agregar lógica para cambiar el idioma del sitio
-}
-</script>
-  <!-- Barra superior con logo, menú y opciones -->
-<nav class="navbar">
-  <div class="navbar-logo">
-    <img src="ruta-a-tu-logo.png" alt="LaluPulseras" />
-  </div>
-  <ul class="navbar-menu">
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Productos</a></li>
-    <li><a href="#">Acerca de</a></li>
-    <li><a href="#">Contacto</a></li>
-  </ul>
-  <div class="navbar-actions">
-    <button class="icon-btn" title="Buscar">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-    <div class="idioma-dropdown">
-      <button class="icon-btn idioma-btn" title="Idioma">
-        <img src="https://flagcdn.com/es.svg" class="bandera" id="bandera-idioma" alt="ES" />
-      </button>
-      <div class="dropdown-content">
-        <button onclick="cambiarIdioma('es','https://flagcdn.com/es.svg')"><img src="https://flagcdn.com/es.svg" class="bandera" alt="ES" /></button>
-        <button onclick="cambiarIdioma('en','https://flagcdn.com/gb.svg')"><img src="https://flagcdn.com/gb.svg" class="bandera" alt="EN" /></button>
-        <button onclick="cambiarIdioma('ca','https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg')"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg" class="bandera" alt="CA" /></button>
+  <body>
+    <script>
+      function cambiarIdioma(idioma, banderaUrl) {
+        document.getElementById('bandera-idioma').src = banderaUrl;
+        document.getElementById('bandera-idioma').alt = idioma.toUpperCase();
+        // Aquí podrías agregar lógica para cambiar el idioma del sitio
+      }
+    </script>
+    <!-- Barra superior con logo, menú y opciones -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <!-- Logo de referencia, reemplaza el src cuando tengas tu logo -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Logo LaluPulseras" />
       </div>
-    </div>
-    <button class="icon-btn" title="Deseos">
-      <i class="fa-regular fa-heart"></i>
-    </button>
-    <button class="icon-btn" title="Iniciar sesión">
-      <i class="fa-regular fa-user"></i>
-    </button>
-  </div>
-</nav>
-  <!-- Nuestros productos -->
-  <section class="nuestros-productos">
-    <h2>Nuestros productos</h2>
-    <div class="categorias">
-      <div class="categoria">
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=200&q=80" alt="Anillos">
-        <span>Anillos</span>
-      </div>
-      <div class="categoria">
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=200&q=80" alt="Collares">
-        <span>Collares</span>
-      </div>
-      <div class="categoria">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=200&q=80" alt="Pulseras">
-        <span>Pulseras</span>
-      </div>
-      <div class="categoria">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=200&q=80" alt="Pendientes">
-        <span>Pendientes</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Banner Dreams Ibiza -->
-  <section class="banner-dreams">
-    <div class="banner-content">
-      <h1>Colección Dreams Ibiza</h1>
-      <p>Joyería artesanal llena de color y energía positiva</p>
-    </div>
-  </section>
-
-  <!-- Slider de productos destacados -->
-  <section class="productos-destacados">
-    <h2>Productos Destacados</h2>
-    <div class="slider">
-      <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
-      <div class="slider-items">
-        <div class="producto">
-          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=200&q=80" alt="Pulsera Elegante">
-          <h3>Pulsera Elegante</h3>
-          <p>Pulsera de perlas y dijes plateados.</p>
-          <span>$15.000</span>
-          <button class="comprar-btn"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
+      <ul class="navbar-menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="icon-btn" title="Buscar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <div class="idioma-dropdown">
+          <button class="icon-btn idioma-btn" title="Idioma">
+            <img src="https://flagcdn.com/es.svg" class="bandera" id="bandera-idioma" alt="ES" />
+          </button>
+          <div class="dropdown-content">
+            <button onclick="cambiarIdioma('es','https://flagcdn.com/es.svg')"><img src="https://flagcdn.com/es.svg" class="bandera" alt="ES" /></button>
+            <button onclick="cambiarIdioma('en','https://flagcdn.com/gb.svg')"><img src="https://flagcdn.com/gb.svg" class="bandera" alt="EN" /></button>
+            <button onclick="cambiarIdioma('ca','https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg')"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg" class="bandera" alt="CA" /></button>
+          </div>
         </div>
-        <div class="producto">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=200&q=80" alt="Collar Bohemio">
-          <h3>Collar Bohemio</h3>
-          <p>Collar con abalorios coloridos y dije de estrella.</p>
-          <span>$20.000</span>
-          <button class="comprar-btn"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
-        </div>
-        <div class="producto">
-          <img src="https://images.unsplash.com/photo-1475189778702
+        <button class="icon-btn" title="Deseos">
+          <i*
+
