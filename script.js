@@ -88,27 +88,62 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(nextReseña, 4500);
   }
 
-  // Cambiar bandera al elegir idioma (NUEVO)
+  // Cambiar bandera al elegir idioma y ocultar la opción seleccionada
   const banderaPrincipal = document.getElementById("bandera-principal");
   const idiomaOpciones = document.querySelectorAll(".idioma-opcion");
+  const idiomaDropdown = document.querySelector('.idioma-dropdown');
+  const idiomaBtn = document.getElementById('idioma-btn-principal');
 
+  // Función para ocultar la opción seleccionada
+  function ocultarIdiomaSeleccionado() {
+    idiomaOpciones.forEach(function(btn) {
+      // Compara la bandera del botón con la principal
+      // Usamos endsWith para evitar problemas con rutas absolutas vs relativas
+      if (banderaPrincipal && btn.getAttribute("data-bandera") && banderaPrincipal.src.endsWith(btn.getAttribute("data-bandera"))) {
+        btn.style.display = 'none';
+      } else {
+        btn.style.display = '';
+      }
+    });
+  }
+
+  // Inicialmente oculta la opción activa
+  ocultarIdiomaSeleccionado();
+
+  // Al hacer click en una opción, cambia la bandera y oculta la seleccionada
   idiomaOpciones.forEach(function(btn) {
     btn.addEventListener("click", function(e) {
       e.preventDefault();
       const nuevaBandera = btn.getAttribute("data-bandera");
       if(banderaPrincipal && nuevaBandera) {
         banderaPrincipal.src = nuevaBandera;
+        ocultarIdiomaSeleccionado();
+      }
+      // Opcional: cerrar el menú después de seleccionar
+      if (idiomaDropdown.classList.contains('active')) {
+        idiomaDropdown.classList.remove('active');
       }
     });
   });
 
-  // Opcional: cerrar dropdown de idioma en móviles tras seleccionar idioma
-  idiomaOpciones.forEach(function(btn) {
-    btn.addEventListener("click", function() {
-      const dropdown = btn.closest(".dropdown-content");
-      if(dropdown) dropdown.style.display = "none";
+  // Al abrir el menú, actualiza las opciones visibles
+  if (idiomaBtn && idiomaDropdown) {
+    idiomaBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      idiomaDropdown.classList.toggle('active');
+      if (idiomaDropdown.classList.contains('active')) {
+        ocultarIdiomaSeleccionado();
+      }
     });
-  });
+    document.addEventListener('click', function(e) {
+      if (idiomaDropdown.classList.contains('active')) {
+        idiomaDropdown.classList.remove('active');
+      }
+    });
+    idiomaDropdown.querySelector('.dropdown-content').addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
 
   // Menu hamburguesa: cerrar menú al hacer click en un link o icono (UX extra)
   const navToggle = document.getElementById("nav-toggle");
@@ -119,25 +154,5 @@ document.addEventListener("DOMContentLoaded", function() {
         navToggle.checked = false;
       }
     });
-  });
-
-});
-// Mostrar/ocultar el menú de idiomas al hacer clic en la bandera
-const idiomaDropdown = document.querySelector('.idioma-dropdown');
-const idiomaBtn = document.getElementById('idioma-btn-principal');
-
-if (idiomaBtn && idiomaDropdown) {
-  idiomaBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    idiomaDropdown.classList.toggle('active');
-  });
-  document.addEventListener('click', function(e) {
-    if (idiomaDropdown.classList.contains('active')) {
-      idiomaDropdown.classList.remove('active');
-    }
-  });
-  // Evita que se cierre al hacer clic dentro del menú
-  idiomaDropdown.querySelector('.dropdown-content').addEventListener('click', function(e) {
-    e.stopPropagation();
-  });
-}
+ *
+
