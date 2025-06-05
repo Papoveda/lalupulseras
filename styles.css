@@ -539,19 +539,6 @@ footer {
   transition: transform 0.18s;
   min-width: 0;
 }
-
-.categoria-cuadrada span {
-  background: rgba(255, 105, 180, 0.85);
-  padding: 0.7em 1.2em;
-  font-size: 1.13em;
-  font-weight: 700;
-  border-radius: 0 12px 0 0;
-  margin: 0;
-  letter-spacing: 1px;
-  position: relative;
-  z-index: 1;
-}
-
 /* Fondo para cada categoría */
 .categoria-cuadrada.anillos {
   background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/anillos.jpg');
