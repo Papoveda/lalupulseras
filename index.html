@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dreams Ibiza - LaluPulseras</title>
-  <!-- Montserrat Google Fonts -->
+  <title>LaluPulseras</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Barra Superior -->
+  <!-- Barra superior -->
   <div class="topbar">
     <div class="topbar-left">
       <select class="idioma">
@@ -17,18 +16,15 @@
         <option value="en">EN</option>
         <option value="ca">CA</option>
       </select>
-    </div>
-    <div class="topbar-right">
       <a href="#" class="topbar-link">Iniciar sesión</a>
       <a href="#" class="topbar-link" title="Lista de deseos">🤍</a>
       <a href="#" class="topbar-link" title="Carrito">🛒</a>
     </div>
   </div>
 
-  <!-- Navegación principal -->
+  <!-- Navegación y buscador -->
   <header>
     <nav class="navbar">
-      <div class="logo">LaluPulseras</div>
       <form class="buscador">
         <input type="text" placeholder="Buscar productos...">
         <button type="submit">🔍</button>
@@ -50,20 +46,34 @@
     </nav>
   </header>
 
-  <!-- Banner Dreams Ibiza -->
-  <section class="banner-dreams">
-    <h1>Dreams Ibiza</h1>
-    <p>Joyería artesanal llena de color y energía positiva</p>
-  </section>
-
   <!-- Nuestros productos -->
   <section class="nuestros-productos">
     <h2>Nuestros productos</h2>
     <div class="categorias">
-      <div class="categoria">Anillos</div>
-      <div class="categoria">Collares</div>
-      <div class="categoria">Pulseras</div>
-      <div class="categoria">Pendientes</div>
+      <div class="categoria">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=200&q=80" alt="Anillos">
+        <span>Anillos</span>
+      </div>
+      <div class="categoria">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=200&q=80" alt="Collares">
+        <span>Collares</span>
+      </div>
+      <div class="categoria">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=200&q=80" alt="Pulseras">
+        <span>Pulseras</span>
+      </div>
+      <div class="categoria">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=200&q=80" alt="Pendientes">
+        <span>Pendientes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Dreams Ibiza -->
+  <section class="banner-dreams">
+    <div class="banner-content">
+      <h1>Colección Dreams Ibiza</h1>
+      <p>Joyería artesanal llena de color y energía positiva</p>
     </div>
   </section>
 
@@ -74,28 +84,32 @@
       <button class="slider-btn prev">&#8592;</button>
       <div class="slider-items">
         <div class="producto">
-          <img src="pulsera1.jpg" alt="Pulsera Elegante">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=200&q=80" alt="Pulsera Elegante">
           <h3>Pulsera Elegante</h3>
           <p>Pulsera de perlas y dijes plateados.</p>
           <span>$15.000</span>
+          <button class="comprar-btn">Añadir al carrito</button>
         </div>
         <div class="producto">
-          <img src="collar1.jpg" alt="Collar Bohemio">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=200&q=80" alt="Collar Bohemio">
           <h3>Collar Bohemio</h3>
           <p>Collar con abalorios coloridos y dije de estrella.</p>
           <span>$20.000</span>
+          <button class="comprar-btn">Añadir al carrito</button>
         </div>
         <div class="producto">
-          <img src="anillo1.jpg" alt="Anillo Minimal">
+          <img src="https://images.unsplash.com/photo-1475189778702-5ec9941484ae?auto=format&fit=facearea&w=200&q=80" alt="Anillo Minimal">
           <h3>Anillo Minimal</h3>
           <p>Anillo ajustable con baño de plata.</p>
           <span>$8.000</span>
+          <button class="comprar-btn">Añadir al carrito</button>
         </div>
         <div class="producto">
-          <img src="pendientes1.jpg" alt="Pendientes Ibiza">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=200&q=80" alt="Pendientes Ibiza">
           <h3>Pendientes Ibiza</h3>
           <p>Pendientes largos con colores vibrantes.</p>
           <span>$12.000</span>
+          <button class="comprar-btn">Añadir al carrito</button>
         </div>
       </div>
       <button class="slider-btn next">&#8594;</button>
@@ -106,8 +120,8 @@
     <p>&copy; 2025 LaluPulseras. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Slider simple JS -->
   <script>
+    // Slider simple JS
     const slider = document.querySelector('.slider-items');
     const prevBtn = document.querySelector('.slider-btn.prev');
     const nextBtn = document.querySelector('.slider-btn.next');
