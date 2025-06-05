@@ -264,21 +264,21 @@ a { color: inherit; }
 /* Cambios aquí: productos alineados en una sola fila y ocupando el ancho completo */
 .categorias-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
-  gap: 1rem;
+  gap: 1.5rem;
   width: 100%;
-  margin: 2em auto 0 auto;
   max-width: 1200px;
+  margin: 2em auto 0 auto;
 }
 
 .categoria-cuadrada {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   background: #fff;
-  padding: 1rem;
+  padding: 0;
   border-radius: 10px;
   box-shadow: 0 0 10px #0001;
   text-decoration: none;
@@ -286,29 +286,33 @@ a { color: inherit; }
   transition: transform 0.2s;
   position: relative;
   min-width: 0;
-  height: 330px;
+  height: 250px;
+  overflow: hidden;
   margin: 0;
+  max-width: 220px; /* máximo ancho por producto */
 }
 
 .categoria-cuadrada img {
   width: 100%;
-  max-width: 120px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 0.7rem;
-  flex-shrink: 0;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px 10px 0 0;
 }
+
 .categoria-cuadrada span {
   position: absolute;
   left: 0; bottom: 0;
+  width: 100%;
   background: rgba(255,105,180,0.85);
   color: #fff;
   font-weight: 700;
-  font-size: 1.18em;
-  padding: 0.6em 1.3em;
-  border-radius: 0 12px 0 0;
+  font-size: 1.12em;
+  padding: 0.6em 0;
+  border-radius: 0 0 10px 10px;
   margin: 0;
   letter-spacing: 1px;
+  text-align: center;
 }
 .categoria-cuadrada:hover { transform: scale(1.03); }
 
