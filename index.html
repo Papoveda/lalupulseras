@@ -18,58 +18,56 @@
     </script>
     <!-- Barra superior con logo, menú y opciones -->
     <nav class="navbar">
-      <div class="navbar-left">
-        <button class="icon-btn" title="Iniciar sesión">
-          <i class="fa-regular fa-user"></i>
-        </button>
-        <div class="navbar-logo">
-          <!-- Cambia esta imagen por tu logo -->
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Logo LaluPulseras" />
-        </div>
-      </div>
-      <ul class="navbar-menu">
-        <li><a href="#">Inicio</a></li>
-        <li class="menu-productos">
-          <a href="#">Productos <i class="fa-solid fa-caret-down"></i></a>
-          <ul class="submenu">
-            <li><a href="#">Collares</a></li>
-            <li><a href="#">Pulseras</a></li>
-            <li><a href="#">Pendientes</a></li>
-            <li><a href="#">Anillos</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Acerca de</a></li>
-        <li><a href="#">Contacto</a></li>
+  <div class="navbar-left">
+    <div class="navbar-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Logo LaluPulseras" />
+    </div>
+  </div>
+  <ul class="navbar-menu">
+    <li><a href="#">Inicio</a></li>
+    <li class="menu-productos">
+      <a href="#">Productos <i class="fa-solid fa-caret-down"></i></a>
+      <ul class="submenu">
+        <li><a href="#">Collares</a></li>
+        <li><a href="#">Pulseras</a></li>
+        <li><a href="#">Pendientes</a></li>
+        <li><a href="#">Anillos</a></li>
       </ul>
-      <div class="navbar-actions">
-        <button class="icon-btn" title="Buscar">
-          <i class="fa-solid fa-magnifying-glass"></i>
+    </li>
+    <li><a href="#">Acerca de</a></li>
+    <li><a href="#">Contacto</a></li>
+  </ul>
+  <div class="navbar-actions">
+    <button class="icon-btn" title="Buscar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <div class="idioma-dropdown">
+      <button class="icon-btn idioma-btn" title="Idioma">
+        <img src="https://flagcdn.com/es.svg" class="bandera" id="bandera-idioma" alt="ES" />
+      </button>
+      <div class="dropdown-content">
+        <button onclick="cambiarIdioma('es','https://flagcdn.com/es.svg')">
+          <img src="https://flagcdn.com/es.svg" class="bandera" alt="ES" />
         </button>
-        <div class="idioma-dropdown">
-          <button class="icon-btn idioma-btn" title="Idioma">
-            <img src="https://flagcdn.com/es.svg" class="bandera" id="bandera-idioma" alt="ES" />
-          </button>
-          <div class="dropdown-content">
-            <button onclick="cambiarIdioma('es','https://flagcdn.com/es.svg')">
-              <img src="https://flagcdn.com/es.svg" class="bandera" alt="ES" />
-            </button>
-            <button onclick="cambiarIdioma('en','https://flagcdn.com/gb.svg')">
-              <img src="https://flagcdn.com/gb.svg" class="bandera" alt="EN" />
-            </button>
-            <button onclick="cambiarIdioma('ca','https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg')">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg" class="bandera" alt="CA" />
-            </button>
-          </div>
-        </div>
-        <button class="icon-btn" title="Deseos">
-          <i class="fa-regular fa-heart"></i>
+        <button onclick="cambiarIdioma('en','https://flagcdn.com/gb.svg')">
+          <img src="https://flagcdn.com/gb.svg" class="bandera" alt="EN" />
         </button>
-        <!-- Icono de iniciar sesión también en el menú derecho -->
-        <button class="icon-btn" title="Iniciar sesión">
-          <i class="fa-regular fa-user"></i>
+        <button onclick="cambiarIdioma('ca','https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg" class="bandera" alt="CA" />
         </button>
       </div>
-    </nav>
+    </div>
+    <button class="icon-btn" title="Lista de deseos">
+      <i class="fa-regular fa-heart"></i>
+    </button>
+    <button class="icon-btn" title="Carrito">
+      <i class="fa-solid fa-bag-shopping"></i>
+    </button>
+    <button class="icon-btn" title="Iniciar sesión">
+      <i class="fa-regular fa-user"></i>
+    </button>
+  </div>
+</nav>
 
     <section class="nuestros-productos">
       <h2>Nuestros productos</h2>
