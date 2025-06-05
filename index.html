@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LaluPulseras</title>
@@ -9,9 +9,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Font Awesome para iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+  </head>
 <body>
-<!-- Barra superior con logo, menú y opciones -->
+<script>
+function cambiarIdioma(idioma, banderaUrl) {
+  document.getElementById('bandera-idioma').src = banderaUrl;
+  document.getElementById('bandera-idioma').alt = idioma.toUpperCase();
+  // Aquí podrías agregar lógica para cambiar el idioma del sitio
+}
+</script>
+  <!-- Barra superior con logo, menú y opciones -->
 <nav class="navbar">
   <div class="navbar-logo">
     <img src="ruta-a-tu-logo.png" alt="LaluPulseras" />
@@ -44,8 +51,6 @@
     </button>
   </div>
 </nav>
-  </header>
-
   <!-- Nuestros productos -->
   <section class="nuestros-productos">
     <h2>Nuestros productos</h2>
