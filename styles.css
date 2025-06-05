@@ -1,81 +1,347 @@
-.categorias.tarjetas-cuadradas {
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #faf9fa;
+  color: #232323;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 {
+  font-weight: 700;
+}
+a { color: inherit; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 6vw;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+.navbar-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar-menu li {
+  position: relative;
+}
+.navbar-menu a {
+  text-decoration: none;
+  color: #232323;
+  font-weight: 500;
+  transition: color 0.12s;
+}
+.navbar-menu a:hover { color: #ff69b4; }
+.menu-productos:hover .submenu,
+.menu-productos:focus-within .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 0.7rem 0;
+  top: 100%;
+  left: 0;
+  min-width: 170px;
+  z-index: 10;
+}
+.submenu li {
+  padding: 0;
+}
+.submenu a {
+  display: block;
+  padding: 0.7rem 1.5rem;
+  color: #232323;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 0;
+}
+.submenu a:hover {
+  background: #ffeaf5;
+  color: #ff69b4;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  color: #232323;
+  font-size: 1.25em;
+  cursor: pointer;
+  transition: color 0.13s;
+  padding: 0.45em;
+  border-radius: 50%;
+}
+.icon-btn:hover, .icon-btn:focus {
+  color: #ff69b4;
+  background: #ffeaf5;
+  outline: none;
+}
+.bandera {
+  width: 23px;
+  height: 17px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  margin-right: 0.2em;
+}
+.idioma-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.idioma-btn { padding: 0; }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 44px;
+  z-index: 15;
+  right: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.idioma-dropdown:hover .dropdown-content,
+.idioma-dropdown:focus-within .dropdown-content {
+  display: block;
+}
+.dropdown-content button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.4em 0.7em;
+  cursor: pointer;
+}
+.dropdown-content button:hover {
+  background: #ffeaf5;
+}
+
+.banner-video {
+  position: relative;
+  width: 100%;
+  max-height: 310px;
+  overflow: hidden;
+  background: #fce6ef;
+  margin-bottom: 2.5rem;
+}
+.banner-video video {
+  width: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+.banner-video-content {
+  position: absolute;
+  top: 50%;
+  left: 7vw;
+  transform: translateY(-50%);
+  color: #fff;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.30);
+}
+.banner-video-content h1 {
+  font-size: 2.4em;
+  margin: 0 0 0.4em 0;
+}
+.banner-video-content p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.nuestros-productos {
+  padding: 2em 0 1em 0;
+  text-align: center;
+}
+
+/* Tarjetas modernas de productos */
+.categorias.tarjetas-modernas {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   margin-top: 2rem;
 }
+.categoria-tarjeta.moderna {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 200px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.17);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(.25,.8,.25,1), box-shadow 0.22s;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.categoria-tarjeta.moderna::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30,30,30,0.6) 60%, rgba(0,0,0,0.1) 100%);
+  z-index: 1;
+  transition: background 0.22s;
+}
+.categoria-tarjeta.moderna span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.18em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+  padding: 7px 22px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.13);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255,255,255,0.18);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+}
+.categoria-tarjeta.moderna:hover, .categoria-tarjeta.moderna:focus {
+  transform: translateY(-9px) scale(1.045);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25), 0 3px 18px rgba(0,0,0,0.10);
+}
+.categoria-tarjeta.moderna:hover::before, .categoria-tarjeta.moderna:focus::before {
+  background: linear-gradient(to top, rgba(255,105,180,0.4) 50%, rgba(0,0,0,0.1) 100%);
+}
 
-.categoria-tarjeta {
+.banner-dreams {
+  background: linear-gradient(90deg, #ff69b4 0, #ffeaf5 100%);
+  color: #fff;
+  padding: 2.5em 0;
+  text-align: center;
+  margin: 2.5em 0 2em 0;
+}
+.banner-dreams .banner-content h1 {
+  font-size: 2em;
+  margin: 0 0 0.4em 0;
+}
+.banner-dreams .banner-content p {
+  font-size: 1.15em;
+  margin: 0;
+}
+
+.productos-destacados {
+  padding: 2em 0;
+  text-align: center;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+.slider-btn {
+  background: #ffeaf5;
+  border: none;
+  color: #ff69b4;
+  font-size: 1.7em;
+  padding: 0.5em 0.8em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.13s;
+}
+.slider-btn:hover { background: #ff69b4; color: #fff; }
+.slider-items {
+  display: flex;
+  gap: 1.7em;
+}
+.producto {
   background: #fff;
-  border: 3px solid #ff69b4; /* Rosa */
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.15), 0 1.5px 4px rgba(0,0,0,0.07);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(255,105,180,0.07), 0 1.5px 6px rgba(0,0,0,0.08);
+  padding: 1em;
   width: 180px;
-  min-height: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  text-align: center;
+  transition: transform 0.14s;
 }
-
-.categoria-tarjeta a {
-  display: block;
-  width: 100%;
-  height: 140px;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  overflow: hidden;
-}
-
-.categoria-tarjeta img {
-  width: 100%;
-  height: 140px;
+.producto img {
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  transition: transform 0.25s;
+  border-radius: 10px;
 }
-
-.categoria-tarjeta span {
-  margin: 1.2rem 0 0.7rem 0;
-  font-size: 1.1em;
+.producto h3 { margin: 0.5em 0 0.1em 0; font-size: 1.08em;}
+.producto p { font-size: 0.97em; color: #444; margin: 0 0 0.3em 0; }
+.producto span {
   font-weight: bold;
   color: #ff69b4;
+  font-size: 1.04em;
+  margin-bottom: 0.7em;
+}
+.comprar-btn {
+  background: #ff69b4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.3em;
+  font-size: 0.98em;
+  cursor: pointer;
+  margin-top: 0.3em;
+  transition: background 0.13s;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.comprar-btn:hover { background: #e75480; }
+
+footer {
+  text-align: center;
+  padding: 2em 0 1.5em 0;
+  color: #fff;
+  background: #ff69b4;
+  margin-top: 2.5em;
+  font-size: 1em;
   letter-spacing: 1px;
-  display: block;
-}
-
-.categoria-tarjeta:hover {
-  transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 12px 28px rgba(255,105,180,0.25), 0 3px 10px rgba(0,0,0,0.10);
-  border-color: #e75480; /* Rosa más intenso al hacer hover */
-}
-
-.categoria-tarjeta:hover img {
-  transform: scale(1.07);
 }
 
 @media (max-width: 900px) {
-  .categorias.tarjetas-cuadradas {
+  .navbar { padding: 18px 2vw; }
+  .categorias.tarjetas-modernas {
     gap: 1rem;
   }
-  .categoria-tarjeta {
+  .categoria-tarjeta.moderna {
     width: 46vw;
     max-width: 250px;
+    height: 180px;
   }
+  .producto { width: 130px; }
+  .slider-items { gap: 0.8em; }
 }
-
 @media (max-width: 600px) {
-  .categorias.tarjetas-cuadradas {
+  .navbar { flex-direction: column; align-items: flex-start; }
+  .navbar-menu { flex-direction: column; gap: 0.7em; }
+  .categorias.tarjetas-modernas {
     flex-direction: column;
     align-items: center;
   }
-  .categoria-tarjeta {
+  .categoria-tarjeta.moderna {
     width: 90vw;
     max-width: 350px;
+    height: 160px;
   }
+  .banner-video-content { left: 3vw; }
 }
