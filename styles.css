@@ -389,7 +389,7 @@ footer {
 .banner-video {
   position: relative;
   width: 100vw;
-  height: 500px;
+  height: 400px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -397,7 +397,7 @@ footer {
 }
 .banner-video video {
   width: 100vw;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
   object-position: center;
   position: absolute;
