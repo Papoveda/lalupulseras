@@ -1,4 +1,3 @@
-// --- Carrusel de Colecciones ---
 document.addEventListener("DOMContentLoaded", function() {
   // Carrusel de Colecciones
   const coleccionSlider = document.querySelector('.coleccion-slider');
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     startColeccionAuto();
   }
 
-  // --- Slider de productos destacados ---
+  // Slider de productos destacados
   const destacadosSlider = document.querySelector('.destacados-items');
   const destacadoCards = document.querySelectorAll('.destacado');
   const destacadosLeft = document.querySelector('.destacados-arrow.left');
@@ -74,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
     destacadosRight.onclick = nextDestacado;
   }
 
-  // --- Slider de Reseñas ---
+  // Slider de Reseñas
   const reseñas = document.querySelectorAll('.reseña');
   let reseñaIndex = 0;
   function showReseña(idx) {
