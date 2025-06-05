@@ -14,14 +14,17 @@
       function cambiarIdioma(idioma, banderaUrl) {
         document.getElementById('bandera-idioma').src = banderaUrl;
         document.getElementById('bandera-idioma').alt = idioma.toUpperCase();
+        // Aquí podrías agregar lógica para cambiar el idioma del sitio si lo deseas
       }
     </script>
+    <!-- Barra superior con logo, menú y opciones -->
     <nav class="navbar">
       <div class="navbar-left">
         <button class="icon-btn" title="Iniciar sesión">
           <i class="fa-regular fa-user"></i>
         </button>
         <div class="navbar-logo">
+          <!-- Cambia esta imagen por tu logo -->
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Logo LaluPulseras" />
         </div>
       </div>
@@ -48,9 +51,15 @@
             <img src="https://flagcdn.com/es.svg" class="bandera" id="bandera-idioma" alt="ES" />
           </button>
           <div class="dropdown-content">
-            <button onclick="cambiarIdioma('es','https://flagcdn.com/es.svg')"><img src="https://flagcdn.com/es.svg" class="bandera" alt="ES" /></button>
-            <button onclick="cambiarIdioma('en','https://flagcdn.com/gb.svg')"><img src="https://flagcdn.com/gb.svg" class="bandera" alt="EN" /></button>
-            <button onclick="cambiarIdioma('ca','https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg')"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg" class="bandera" alt="CA" /></button>
+            <button onclick="cambiarIdioma('es','https://flagcdn.com/es.svg')">
+              <img src="https://flagcdn.com/es.svg" class="bandera" alt="ES" />
+            </button>
+            <button onclick="cambiarIdioma('en','https://flagcdn.com/gb.svg')">
+              <img src="https://flagcdn.com/gb.svg" class="bandera" alt="EN" />
+            </button>
+            <button onclick="cambiarIdioma('ca','https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg')">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg" class="bandera" alt="CA" />
+            </button>
           </div>
         </div>
         <button class="icon-btn" title="Deseos">
@@ -115,16 +124,5 @@
             <img src="https://images.unsplash.com/photo-1475189778702-5ec9941484c6?auto=format&fit=facearea&w=200&q=80" alt="Pendientes Luna">
             <h3>Pendientes Luna</h3>
             <p>Pendientes con forma de luna y piedras azules.</p>
-            <span>$13.000</span>
-            <button class="comprar-btn"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
-          </div>
-        </div>
-        <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-    </section>
-
-    <footer>
-      &copy; 2025 LaluPulseras. Todos los derechos reservados.
-    </footer>
-  </body>
-</html>
+            <span
+
