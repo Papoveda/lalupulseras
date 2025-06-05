@@ -554,7 +554,7 @@ footer {
 
 /* Fondo para cada categoría */
 .categoria-cuadrada.anillos {
-  background-image: url('media/anillos.jpg');
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/pulseras.jpg');
 }
 .categoria-cuadrada.collares {
   background-image: url('media/anillos.jpg');
@@ -568,3 +568,11 @@ footer {
 .categoria-cuadrada.tobilleras {
   background-image: url('media/anillos.jpg');
 }
+
+
+
+
+
+
+
+
