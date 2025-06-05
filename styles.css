@@ -15,12 +15,20 @@ body {
 .topbar-left {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
 }
 .topbar-link {
   color: #FC6FC0;
   text-decoration: none;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.topbar-link i {
+  font-size: 1.15em;
 }
 .topbar-link:hover {
   color: #FC706F;
