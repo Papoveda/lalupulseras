@@ -8,6 +8,68 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      /* NUEVA SECCIÓN TARJETAS CUADRADAS */
+      .categorias.tarjetas-cuadradas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+      .categoria-tarjeta {
+        background: #fff;
+        border: 3px solid #ff69b4; /* Rosa */
+        border-radius: 16px;
+        box-shadow: 0 6px 18px rgba(255, 105, 180, 0.15), 0 1.5px 4px rgba(0,0,0,0.07);
+        width: 180px;
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+        cursor: pointer;
+        margin-bottom: 1rem;
+      }
+      .categoria-tarjeta img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-top-left-radius: 13px;
+        border-top-right-radius: 13px;
+      }
+      .categoria-tarjeta span {
+        margin: 1.2rem 0 0.7rem 0;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #ff69b4;
+        letter-spacing: 1px;
+      }
+      .categoria-tarjeta:hover {
+        transform: translateY(-8px) scale(1.04);
+        box-shadow: 0 12px 28px rgba(255,105,180,0.25), 0 3px 10px rgba(0,0,0,0.10);
+        border-color: #e75480; /* Rosa más intenso al hacer hover */
+      }
+      @media (max-width: 900px) {
+        .categorias.tarjetas-cuadradas {
+          gap: 1rem;
+        }
+        .categoria-tarjeta {
+          width: 46vw;
+          max-width: 250px;
+        }
+      }
+      @media (max-width: 600px) {
+        .categorias.tarjetas-cuadradas {
+          flex-direction: column;
+          align-items: center;
+        }
+        .categoria-tarjeta {
+          width: 90vw;
+          max-width: 350px;
+        }
+      }
+    </style>
   </head>
   <body>
     <script>
@@ -81,31 +143,32 @@
       </div>
     </section>
 
+    <!-- SECCIÓN MEJORADA DE NUESTROS PRODUCTOS -->
     <section class="nuestros-productos">
-  <h2>Nuestros productos</h2>
-  <div class="categorias">
-    <div class="categoria">
-      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Anillos">
-      <span>Anillos</span>
-    </div>
-    <div class="categoria">
-      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Collares">
-      <span>Collares</span>
-    </div>
-    <div class="categoria">
-      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Pulseras">
-      <span>Pulseras</span>
-    </div>
-    <div class="categoria">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Pendientes">
-      <span>Pendientes</span>
-    </div>
-    <div class="categoria">
-      <img src="https://images.unsplash.com/photo-1513105737057-123c1bca2dce?auto=format&fit=crop&w=600&q=80" alt="Tobilleras">
-      <span>Tobilleras</span>
-    </div>
-  </div>
-</section>
+      <h2>Nuestros productos</h2>
+      <div class="categorias tarjetas-cuadradas">
+        <div class="categoria-tarjeta">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Anillos">
+          <span>Anillos</span>
+        </div>
+        <div class="categoria-tarjeta">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Collares">
+          <span>Collares</span>
+        </div>
+        <div class="categoria-tarjeta">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80" alt="Pulseras">
+          <span>Pulseras</span>
+        </div>
+        <div class="categoria-tarjeta">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Pendientes">
+          <span>Pendientes</span>
+        </div>
+        <div class="categoria-tarjeta">
+          <img src="https://images.unsplash.com/photo-1513105737057-123c1bca2dce?auto=format&fit=crop&w=600&q=80" alt="Tobilleras">
+          <span>Tobilleras</span>
+        </div>
+      </div>
+    </section>
 
     <section class="banner-dreams">
       <div class="banner-content">
