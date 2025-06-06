@@ -255,13 +255,11 @@ a { color: inherit; }
 }
 .banner-video-content h1 { font-size: 2.4em; margin: 0 0 0.4em 0; }
 .banner-video-content p { font-size: 1.2em; margin: 0; }
-
 .nuestros-productos {
   padding: 2em 0 1em 0;
   text-align: center;
 }
-
-  .categorias-grid {
+.categorias-grid {
   display: flex;
   gap: 2px;
   width: 100%;
@@ -374,6 +372,24 @@ a { color: inherit; }
 .coleccion-arrow.right { right: 16px; }
 .coleccion-arrow:hover { background: #ff69b4; color: #fff; }
 
+.coleccion-btn {
+  background: #fff;
+  color: #e05297;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.coleccion-btn:active,
+.coleccion-btn.clickeado {
+  background: #e05297;
+  color: #fff;
+}
+  
 /* Productos destacados */
 .productos-destacados {
   padding: 2em 0;
