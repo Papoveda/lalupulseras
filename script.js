@@ -95,17 +95,21 @@ document.addEventListener("DOMContentLoaded", function() {
   const idiomaBtn = document.getElementById('idioma-btn-principal');
 
   // Función para ocultar la opción seleccionada
-  function ocultarIdiomaSeleccionado() {
-    idiomaOpciones.forEach(function(btn) {
-      // Compara la bandera del botón con la principal
-      // Usamos endsWith para evitar problemas con rutas absolutas vs relativas
-      if (banderaPrincipal && btn.getAttribute("data-bandera") && banderaPrincipal.src.endsWith(btn.getAttribute("data-bandera"))) {
+ function ocultarIdiomaSeleccionado() {
+  idiomaOpciones.forEach(function(btn) {
+    // Compara solo el nombre del archivo SVG de la bandera
+    const btnSrc = btn.getAttribute("data-bandera");
+    if (banderaPrincipal && btnSrc) {
+      const banderaActual = banderaPrincipal.src.split('/').pop();
+      const banderaBtn = btnSrc.split('/').pop();
+      if (banderaActual === banderaBtn) {
         btn.style.display = 'none';
       } else {
         btn.style.display = '';
       }
-    });
-  }
+    }
+  });
+}
 
   // Inicialmente oculta la opción activa
   ocultarIdiomaSeleccionado();
