@@ -275,22 +275,22 @@ a { color: inherit; }
 
 .categoria-cuadrada {
   flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  background: #fff;
-  padding: 0;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #0001;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s;
-  position: relative;
   min-width: 0;
-  height: 300px;
+  height: 220px; /* Puedes ajustar la altura aquí si lo deseas */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  box-shadow: none;
   overflow: hidden;
+  transition: transform 0.18s;
   margin: 0;
-  max-width: 280px; /* máximo ancho por producto */
 }
 
 .categoria-cuadrada img {
@@ -302,18 +302,20 @@ a { color: inherit; }
 }
 
 .categoria-cuadrada span {
-  position: absolute;
-  left: 0; bottom: 0;
   width: 100%;
-  background: rgba(255,105,180,0.85);
-  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 105, 180, 0.85);
+  padding: 0.7em 0;
+  font-size: 1.13em;
   font-weight: 700;
-  font-size: 1.12em;
-  padding: 0.6em 0;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0;
   margin: 0;
   letter-spacing: 1px;
   text-align: center;
+  z-index: 1;
+  box-sizing: border-box;
 }
 .categoria-cuadrada:hover { transform: scale(1.03); }
 
@@ -573,4 +575,16 @@ footer {
 }
 .categoria-cuadrada.tobilleras {
   background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/tobilleras.jpg');
+}
+/* Responsive: en móviles, las categorías van en columna */
+@media (max-width: 700px) {
+  .categorias-grid {
+    flex-direction: column;
+    width: 100%;
+  }
+  .categoria-cuadrada {
+    height: 120px;
+    width: 100%;
+    max-width: 100%;
+  }
 }
