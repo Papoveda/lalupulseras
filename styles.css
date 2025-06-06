@@ -264,9 +264,11 @@ a { color: inherit; }
 
 /* Cambios aquí: productos alineados en una sola fila y ocupando el ancho completo */
 .categorias-grid {
-  width: 100%;
   display: flex;
   gap: 2px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
