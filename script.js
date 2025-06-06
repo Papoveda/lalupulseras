@@ -158,5 +158,5 @@ document.addEventListener("DOMContentLoaded", function() {
         navToggle.checked = false;
       }
     });
- *
-
+  }); // <--- cierre correcto del forEach
+}); // <--- cierre correcto del DOMContentLoaded
