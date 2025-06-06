@@ -127,7 +127,6 @@ a { color: inherit; }
   border-radius: 8px;
   overflow: hidden;
 }
-
 .idioma-dropdown.active .dropdown-content {
   display: block;
 }
@@ -262,8 +261,7 @@ a { color: inherit; }
   text-align: center;
 }
 
-/* Cambios aquí: productos alineados en una sola fila y ocupando el ancho completo */
-.categorias-grid {
+  .categorias-grid {
   display: flex;
   gap: 2px;
   width: 100%;
@@ -276,7 +274,7 @@ a { color: inherit; }
 .categoria-cuadrada {
   flex: 1 1 0;
   min-width: 0;
-  height: 220px; /* Puedes ajustar la altura aquí si lo deseas */
+  height: 300px; /* Puedes ajustar la altura aquí si lo deseas */
   display: flex;
   align-items: flex-end;
   justify-content: center;
