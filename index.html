@@ -51,7 +51,6 @@
   </button>
 </div>
 </div>
-    <!-- ... otros iconos ... -->
 </div>
     <button class="icon-btn" title="Lista de deseos"><i class="fas fa-heart"></i></button>
     <button class="icon-btn" title="Carrito"><i class="fas fa-shopping-bag"></i></button>
@@ -103,24 +102,26 @@
   </button>
 </section>
 
-  <!-- Productos destacados -->
   <section class="productos-destacados">
-    <h2>Productos Destacados</h2>
-    <div class="destacados-slider">
-      <button class="destacados-arrow left">&#10094;</button>
-      <div class="destacados-items">
-        <div class="destacado"><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=200&q=80" alt="Pulsera Elegante"><h3>Pulsera Elegante</h3></div>
-        <div class="destacado"><img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=200&q=80" alt="Collar Bohemio"><h3>Collar Bohemio</h3></div>
-        <div class="destacado"><img src="https://images.unsplash.com/photo-1475189778702-5ec9941484c6?auto=format&fit=facearea&w=200&q=80" alt="Pendientes Luna"><h3>Pendientes Luna</h3></div>
-        <div class="destacado"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=facearea&w=200&q=80" alt="Anillo Chic"><h3>Anillo Chic</h3></div>
-        <div class="destacado"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=200&q=80" alt="Tobillera Summer"><h3>Tobillera Summer</h3></div>
-        <div class="destacado"><img src="https://images.unsplash.com/photo-1513105737057-123c1bca2dce?auto=format&fit=facearea&w=200&q=80" alt="Collar Color"><h3>Collar Color</h3></div>
-        <div class="destacado"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=200&q=80" alt="Pulsera Dúo"><h3>Pulsera Dúo</h3></div>
-        <div class="destacado"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=200&q=80" alt="Pendientes Sol"><h3>Pendientes Sol</h3></div>
+  <h2>Productos Destacados</h2>
+  <div class="destacados-slider">
+    <button class="destacados-arrow left" aria-label="Anterior">
+      <!-- SVG flecha izquierda -->
+      <svg width="28" height="28" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" fill="none" stroke="#b23c7e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="destacados-items">
+      <!-- Repite esto para cada producto -->
+      <div class="destacado">
+        <img src="media/tu_producto.jpg" alt="Producto 1" />
+        <h3>Nombre del producto</h3>
       </div>
-      <button class="destacados-arrow right">&#10095;</button>
     </div>
-  </section>
+    <button class="destacados-arrow right" aria-label="Siguiente">
+      <!-- SVG flecha derecha -->
+      <svg width="28" height="28" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" fill="none" stroke="#b23c7e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</section>
 
   <!-- Reseñas de clientes -->
   <section class="reseñas">
