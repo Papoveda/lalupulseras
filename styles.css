@@ -372,20 +372,20 @@ a { color: inherit; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.82);
   color: #b23c7e;
   border: none;
-  font-size: 2.4em;
-  width: 44px;
-  height: 44px;
+  font-size: 2.2em;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
-  transition: background 0.13s, color 0.13s, box-shadow 0.13s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  transition: background 0.15s, color 0.15s, box-shadow 0.13s;
   cursor: pointer;
-  z-index: 10;
+  z-index: 12;
   opacity: 0.93;
 }
 .coleccion-arrow.left { left: 24px; }
@@ -393,7 +393,10 @@ a { color: inherit; }
 .coleccion-arrow:hover {
   background: #b23c7e;
   color: #fff;
-  box-shadow: 0 4px 24px rgba(178,60,126,0.12);
+  box-shadow: 0 4px 24px rgba(178,60,126,0.16);
+}
+.colecciones-carrusel {
+  position: relative; /* Asegura que las flechas se posicionen respecto a la sección */
 }
 @media (max-width: 700px) {
   .coleccion-slider,
