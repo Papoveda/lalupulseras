@@ -102,26 +102,34 @@
   </button>
 </section>
 
-  <section class="productos-destacados">
   <h2>Productos Destacados</h2>
-  <div class="destacados-slider">
-    <button class="destacados-arrow left" aria-label="Anterior">
-      <!-- SVG flecha izquierda -->
-      <svg width="28" height="28" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" fill="none" stroke="#b23c7e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <div class="destacados-items">
-      <!-- Repite esto para cada producto -->
-      <div class="destacado">
-        <img src="media/tu_producto.jpg" alt="Producto 1" />
-        <h3>Nombre del producto</h3>
-      </div>
-    </div>
-    <button class="destacados-arrow right" aria-label="Siguiente">
-      <!-- SVG flecha derecha -->
-      <svg width="28" height="28" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18" fill="none" stroke="#b23c7e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="destacados-fila">
+  <div class="destacado">
+    <img src="ruta/imagen1.jpg" alt="Pulsera Bohemia" />
+    <div class="destacado-nombre">Pulsera Bohemia | Magical wonder</div>
+    <div class="destacado-precio">$19.990</div>
+    <button class="destacado-comprar">
+      <span class="icon-bolsa">
+        <!-- Ícono bolsa SVG -->
+        <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 7V6a6 6 0 1 1 12 0v1"/><rect width="16" height="14" x="4" y="7" rx="2"/><path d="M9 11v2"/><path d="M15 11v2"/></svg>
+      </span>
+      Comprar
     </button>
   </div>
-</section>
+  <!-- Repite 4 veces más cambiando la imagen y nombre/valor -->
+  <div class="destacado">
+    <img src="ruta/imagen2.jpg" alt="Producto 2" />
+    <div class="destacado-nombre">Collar Luna | Moonlight</div>
+    <div class="destacado-precio">$15.990</div>
+    <button class="destacado-comprar">
+      <span class="icon-bolsa">
+        <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 7V6a6 6 0 1 1 12 0v1"/><rect width="16" height="14" x="4" y="7" rx="2"/><path d="M9 11v2"/><path d="M15 11v2"/></svg>
+      </span>
+      Comprar
+    </button>
+  </div>
+  <!-- ...más tarjetas... -->
+</div>
 
   <!-- Reseñas de clientes -->
   <section class="reseñas">
