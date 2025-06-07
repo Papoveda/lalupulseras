@@ -663,3 +663,97 @@ footer {
     max-width: 100%;
   }
 }
+.destacados-fila {
+  display: flex;
+  justify-content: center;
+  gap: 2.2em;
+  margin: 2.2em 0 1.7em 0;
+  flex-wrap: wrap;
+}
+
+.destacado {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px rgba(178,60,126,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 1.2em 0.6em 1.3em 0.6em;
+  transition: box-shadow 0.17s;
+  position: relative;
+}
+.destacado:hover {
+  box-shadow: 0 4px 28px rgba(178,60,126,0.18);
+}
+.destacado img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1em;
+}
+.destacado-nombre {
+  font-size: 0.96em;
+  font-family: 'Dancing Script', 'Montserrat', cursive, Arial, sans-serif;
+  font-weight: 500;
+  color: #b23c7e;
+  text-align: center;
+  margin-bottom: 0.4em;
+  letter-spacing: 0.01em;
+}
+.destacado-precio {
+  font-size: 1.1em;
+  color: #232323;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+}
+.destacado-comprar {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  background: #ffeaf5;
+  color: #b23c7e;
+  border: none;
+  border-radius: 19px;
+  font-weight: 700;
+  padding: 0.6em 1.15em;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(178,60,126,0.10);
+  transition: background 0.17s;
+}
+.destacado-comprar:hover {
+  background: #b23c7e;
+  color: #fff;
+}
+.icon-bolsa {
+  display: flex;
+  align-items: center;
+  margin-right: 0.1em;
+}
+@media (max-width: 1100px) {
+  .destacados-fila {
+    gap: 1.1em;
+  }
+  .destacado {
+    width: 160px;
+  }
+  .destacado img {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (max-width: 700px) {
+  .destacados-fila {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  .destacado {
+    width: 45vw;
+    min-width: 140px;
+    max-width: 170px;
+    margin-bottom: 1em;
+  }
+}
