@@ -415,8 +415,8 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  height: 345px; /* <-- 50% más alto que el original (antes ~230px) */
+  width: 240px;    /* 200px + 20% */
+  height: 518px;   /* 345px + 50% */
   padding: 1.2em 0.6em 1.3em 0.6em;
   transition: box-shadow 0.17s;
   position: relative;
@@ -425,8 +425,8 @@ a { color: inherit; }
   box-shadow: 0 4px 28px rgba(178,60,126,0.18);
 }
 .destacado img {
-  width: 120px;
-  height: 180px; /* <-- 50% más alto que antes (antes 120px) */
+  width: 144px;    /* 120px + 20% */
+  height: 270px;   /* 180px + 50% */
   object-fit: cover;
   border-radius: 16px;
   margin-bottom: 1em;
@@ -476,12 +476,12 @@ a { color: inherit; }
     gap: 1.1em;
   }
   .destacado {
-    width: 160px;
-    height: 260px;
+    width: 192px;    /* 160px + 20% */
+    height: 390px;   /* 260px + 50% */
   }
   .destacado img {
-    width: 90px;
-    height: 135px;
+    width: 108px;    /* 90px + 20% */
+    height: 203px;   /* 135px + 50% */
   }
 }
 @media (max-width: 700px) {
@@ -490,36 +490,17 @@ a { color: inherit; }
     gap: 1em;
   }
   .destacado {
-    width: 45vw;
-    min-width: 140px;
-    max-width: 170px;
-    height: 210px;
+    width: 54vw;         /* 45vw + 20% */
+    min-width: 168px;    /* 140px + 20% */
+    max-width: 204px;    /* 170px + 20% */
+    height: 315px;       /* 210px + 50% */
     margin-bottom: 1em;
   }
   .destacado img {
-    width: 70px;
-    height: 105px;
+    width: 84px;         /* 70px + 20% */
+    height: 157px;       /* 105px + 50% */
   }
 }
-
-/* Responsive para destacados */
-@media (max-width: 700px) {
-  .destacados-items {
-    width: 95vw;
-    gap: 1.1em;
-  }
-  .destacado {
-    width: 140px;
-    padding: 0.7em 0.2em 1em 0.2em;
-  }
-  .destacado img {
-    width: 88px;
-    height: 88px;
-  }
-  .destacados-arrow.left { left: 2px; }
-  .destacados-arrow.right { right: 2px; }
-}
-
 /* -------------------- RESEÑAS -------------------- */
 .reseñas {
   padding: 2em 0;
