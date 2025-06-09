@@ -902,22 +902,22 @@ footer {
   background: #232323;
 }
 
-/* Redes sociales centradas */
+/* Redes sociales centradas, iconos más pequeños y juntos */
 .footer-social {
   text-align: center;
-  margin: 2em 0 0.3em 0;
+  margin: 1.2em 0 0.3em 0;
 }
 .footer-social a {
   color: #b23c7e;
-  font-size: 1.55em;
-  margin: 0 0.32em;
+  font-size: 1.2em;
+  margin: 0 0.13em;
   display: inline-block;
   transition: color 0.17s, transform 0.17s;
   vertical-align: middle;
 }
 .footer-social a:hover {
   color: #232323;
-  transform: translateY(-4px) scale(1.13);
+  transform: translateY(-2px) scale(1.12);
 }
 .footer-copy {
   text-align: center;
