@@ -416,7 +416,7 @@ a { color: inherit; }
   flex-direction: column;
   align-items: center;
   width: 200px;
-  height: 345px; /* <-- 50% más alto que el original (antes ~230px) */
+  height: 360px; 
   padding: 1.2em 0.6em 1.3em 0.6em;
   transition: box-shadow 0.17s;
   position: relative;
@@ -425,8 +425,8 @@ a { color: inherit; }
   box-shadow: 0 4px 28px rgba(178,60,126,0.18);
 }
 .destacado img {
-  width: 120px;
-  height: 180px; /* <-- 50% más alto que antes (antes 120px) */
+  width: 100%;
+  height: 250px; 
   object-fit: cover;
   border-radius: 16px;
   margin-bottom: 1em;
@@ -491,9 +491,9 @@ a { color: inherit; }
   }
   .destacado {
     width: 45vw;
-    min-width: 140px;
-    max-width: 170px;
-    height: 210px;
+    min-width: 110px;
+    max-width: 145px;
+    height: 143px;
     margin-bottom: 1em;
   }
   .destacado img {
