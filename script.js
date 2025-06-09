@@ -160,3 +160,37 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }); // <--- cierre correcto del forEach
 }); // <--- cierre correcto del DOMContentLoaded
+// Carrusel automático para Productos Destacados
+document.addEventListener('DOMContentLoaded', function() {
+  const carrusel = document.querySelector('.destacados-carrusel');
+  const arrowLeft = document.querySelector('.destacado-arrow.left');
+  const arrowRight = document.querySelector('.destacado-arrow.right');
+  let autoScroll;
+
+  function scrollRight() {
+    if (carrusel && carrusel.querySelector('.destacado')) {
+      const cardWidth = carrusel.querySelector('.destacado').offsetWidth;
+      const gap = parseInt(getComputedStyle(carrusel).gap) || 20; // fallback gap
+      carrusel.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+    }
+  }
+  function scrollLeft() {
+    if (carrusel && carrusel.querySelector('.destacado')) {
+      const cardWidth = carrusel.querySelector('.destacado').offsetWidth;
+      const gap = parseInt(getComputedStyle(carrusel).gap) || 20;
+      carrusel.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+    }
+  }
+
+  if (arrowLeft && arrowRight && carrusel) {
+    arrowLeft.addEventListener('click', scrollLeft);
+    arrowRight.addEventListener('click', scrollRight);
+
+    // Autoscroll cada 2.5 segundos
+    autoScroll = setInterval(scrollRight, 2500);
+
+    // Pausa el autoscroll al pasar el mouse
+    carrusel.addEventListener('mouseenter', () => clearInterval(autoScroll));
+    carrusel.addEventListener('mouseleave', () => autoScroll = setInterval(scrollRight, 2500));
+  }
+});
