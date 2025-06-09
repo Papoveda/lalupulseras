@@ -399,67 +399,92 @@ a { color: inherit; }
   color: #fff;
 }
 
-/* -------------------- PRODUCTOS DESTACADOS (MODERNO) -------------------- */
-.destacados-fila {
+/* ===================== PRODUCTOS DESTACADOS (CARRUSEL) ===================== */
+.destacados-carrusel-contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2em auto;
   display: flex;
-  justify-content: center;
-  gap: 2.2em;
-  margin: 2.2em 0 1.7em 0;
-  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.destacados-carrusel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.2em;
+  padding: 0.5em 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.destacados-carrusel::-webkit-scrollbar {
+  display: none;
 }
 
 .destacado {
   background: #fff;
-  border-radius: 22px;
-  box-shadow: 0 2px 16px rgba(178,60,126,0.10);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(178,60,126,0.10);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-width: 200px;
+  max-width: 200px;
   width: 200px;
-  height: 360px; 
-  padding: 1.2em 0.6em 1.3em 0.6em;
-  transition: box-shadow 0.17s;
+  height: 320px;
+  overflow: hidden;
   position: relative;
+  transition: box-shadow 0.17s;
 }
 .destacado:hover {
-  box-shadow: 0 4px 28px rgba(178,60,126,0.18);
+  box-shadow: 0 4px 20px rgba(178,60,126,0.16);
 }
 .destacado img {
   width: 100%;
-  height: 250px; 
+  height: 75%;
   object-fit: cover;
-  border-radius: 16px;
-  margin-bottom: 1em;
+  border-radius: 18px 18px 0 0;
+  display: block;
+}
+.destacado-info {
+  width: 100%;
+  height: 25%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.3em 0.8em 0.7em 0.8em;
+  box-sizing: border-box;
 }
 .destacado-nombre {
-  font-size: 0.96em;
+  font-size: 1em;
   font-family: 'Dancing Script', 'Montserrat', cursive, Arial, sans-serif;
   font-weight: 500;
   color: #b23c7e;
   text-align: center;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.1em;
   letter-spacing: 0.01em;
 }
 .destacado-precio {
-  font-size: 1.1em;
+  font-size: 1.08em;
   color: #232323;
   font-weight: 700;
-  margin-bottom: 0.7em;
+  margin-bottom: 0.12em;
 }
 .destacado-comprar {
-  margin-top: auto;
   display: flex;
   align-items: center;
-  gap: 0.45em;
+  gap: 0.38em;
   background: #ffeaf5;
   color: #b23c7e;
   border: none;
-  border-radius: 19px;
+  border-radius: 16px;
   font-weight: 700;
-  padding: 0.6em 1.15em;
-  font-size: 1em;
+  padding: 0.45em 1em;
+  font-size: 0.97em;
   cursor: pointer;
-  box-shadow: 0 2px 12px rgba(178,60,126,0.10);
+  box-shadow: 0 2px 9px rgba(178,60,126,0.09);
   transition: background 0.17s;
 }
 .destacado-comprar:hover {
@@ -469,55 +494,69 @@ a { color: inherit; }
 .icon-bolsa {
   display: flex;
   align-items: center;
-  margin-right: 0.1em;
-}
-@media (max-width: 1100px) {
-  .destacados-fila {
-    gap: 1.1em;
-  }
-  .destacado {
-    width: 160px;
-    height: 260px;
-  }
-  .destacado img {
-    width: 90px;
-    height: 135px;
-  }
-}
-@media (max-width: 700px) {
-  .destacados-fila {
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-  .destacado {
-    width: 45vw;
-    min-width: 110px;
-    max-width: 145px;
-    height: 143px;
-    margin-bottom: 1em;
-  }
-  .destacado img {
-    width: 70px;
-    height: 105px;
-  }
+  margin-right: 0.08em;
 }
 
-/* Responsive para destacados */
-@media (max-width: 700px) {
-  .destacados-items {
-    width: 95vw;
-    gap: 1.1em;
-  }
+/* Flechas sobrias (sin fondo ni borde) */
+.destacado-arrow {
+  background: none;
+  border: none;
+  color: #b23c7e;
+  font-size: 2.2em;
+  cursor: pointer;
+  padding: 0 0.18em;
+  transition: color 0.17s;
+  line-height: 1;
+  z-index: 10;
+}
+.destacado-arrow:hover {
+  color: #232323;
+}
+.destacado-arrow:focus {
+  outline: none;
+}
+
+/* Botón Ver Todo */
+.destacados-ver-todo-contenedor {
+  text-align: center;
+  margin-top: 1.2em;
+}
+.destacados-ver-todo {
+  background: #ffeaf5;
+  color: #b23c7e;
+  border: none;
+  border-radius: 16px;
+  font-weight: 700;
+  padding: 0.55em 2.3em;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 9px rgba(178,60,126,0.09);
+  transition: background 0.17s;
+}
+.destacados-ver-todo:hover {
+  background: #b23c7e;
+  color: #fff;
+}
+
+/* Responsive Destacados Carrusel */
+@media (max-width: 1100px) {
   .destacado {
-    width: 140px;
-    padding: 0.7em 0.2em 1em 0.2em;
+    min-width: 145px;
+    max-width: 145px;
+    width: 145px;
+    height: 232px;
   }
-  .destacado img {
-    width: 88px;
-    height: 88px;
+}
+@media (max-width: 700px) {
+  .destacado {
+    min-width: 44vw;
+    max-width: 44vw;
+    width: 44vw;
+    height: 143px;
   }
-  .destacados-arrow.left { left: 2px; }
-  .destacados-arrow.right { right: 2px; }
+  .destacados-carrusel {
+    gap: 0.7em;
+  }
 }
 
 /* -------------------- RESEÑAS -------------------- */
