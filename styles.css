@@ -248,12 +248,14 @@ a { color: inherit; }
 }
 .banner-video-content h1 { font-size: 2.4em; margin: 0 0 0.4em 0; }
 .banner-video-content p { font-size: 1.2em; margin: 0; }
+/* -------- Sección de Productos (CATEGORÍAS) -------- */
 
-/* -------------------- PRODUCTOS -------------------- */
 .nuestros-productos {
   padding: 2em 0 1em 0;
   text-align: center;
 }
+
+/* GRID de categorías - ESCRITORIO */
 .categorias-grid {
   display: flex;
   gap: 2px;
@@ -264,6 +266,8 @@ a { color: inherit; }
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Tarjetas de categoría - ESCRITORIO */
 .categoria-cuadrada {
   flex: 1 1 0;
   min-width: 0;
@@ -283,13 +287,25 @@ a { color: inherit; }
   transition: transform 0.18s;
   margin: 0;
 }
-.categoria-cuadrada img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px 10px 0 0;
+
+/* Fondo para cada categoría (puedes modificar las URLs si cambian) */
+.categoria-cuadrada.anillos {
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/anillos.jpg');
 }
+.categoria-cuadrada.collares {
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/collares.jpg');
+}
+.categoria-cuadrada.pulseras {
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/pulseras.jpg');
+}
+.categoria-cuadrada.pendientes {
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/pendientes.jpg');
+}
+.categoria-cuadrada.tobilleras {
+  background-image: url('https://github.com/Papoveda/lalupulseras/raw/principal/media/tobilleras.jpg');
+}
+
+/* Texto dentro de la tarjeta */
 .categoria-cuadrada span {
   width: 100%;
   position: absolute;
@@ -306,7 +322,35 @@ a { color: inherit; }
   z-index: 1;
   box-sizing: border-box;
 }
-.categoria-cuadrada:hover { transform: scale(1.03); }
+
+.categoria-cuadrada:hover {
+  transform: scale(1.03);
+}
+
+/* ------- RESPONSIVE ------- */
+@media (max-width: 1100px) {
+  .categoria-cuadrada {
+    width: 32vw;
+    height: 220px;
+  }
+  .categorias-grid {
+    height: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  .categorias-grid {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .categoria-cuadrada {
+    height: 120px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 
 /* -------------------- CARRUSEL DE COLECCIONES -------------------- */
 .colecciones-carrusel {
