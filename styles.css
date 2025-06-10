@@ -973,3 +973,8 @@ footer {
     max-width: 260px;
   }
 }
+.categorias-grid,
+.categoria-cuadrada,
+.categoria-cuadrada img {
+  height: 500px !important;
+}
