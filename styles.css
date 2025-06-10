@@ -249,7 +249,7 @@ a { color: inherit; }
 .banner-video-content h1 { font-size: 2.4em; margin: 0 0 0.4em 0; }
 .banner-video-content p { font-size: 1.2em; margin: 0; }
 
-/* -------------------- CATEGORÍAS -------------------- */
+/* -------------------- PRODUCTOS -------------------- */
 .nuestros-productos {
   padding: 2em 0 1em 0;
   text-align: center;
@@ -259,7 +259,7 @@ a { color: inherit; }
   gap: 2px;
   width: 100%;
   max-width: 100%;
-  height: 400px;
+  height: 500px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -267,7 +267,7 @@ a { color: inherit; }
 .categoria-cuadrada {
   flex: 1 1 0;
   min-width: 0;
-  height: 400px;
+  height: 500px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -285,7 +285,7 @@ a { color: inherit; }
 }
 .categoria-cuadrada img {
   width: 100%;
-  height: 400px;
+  height: 500px;
   object-fit: cover;
   display: block;
   border-radius: 10px 10px 0 0;
