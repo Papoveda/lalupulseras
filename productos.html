@@ -2,46 +2,68 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>Pulsera Rosa | Lalu Pulseras</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pulseras Femeninas - Productos</title>
+  <!-- Fuente Montserrat -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="producto-page">
+
+  <!-- MENÚ PRINCIPAL -->
   <header>
-    <h1>Pulseras Femeninas</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="productos.html">Productos</a>
-      <a href="acerca.html">Acerca de Nosotros</a>
-      <a href="contacto.html">Contacto</a>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://github.com/Papoveda/lalupulseras/raw/principal/media/logo-lalu.png" alt="Lalu Pulseras" style="height:42px;">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="personalizados.html">Personalizados</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
     </nav>
   </header>
+
+  <!-- CONTENIDO DEL PRODUCTO -->
   <main>
-    <h2>Productos</h2>
-    <div class="productos">
-      <div class="producto">
-        <img src="pulsera1.jpg" alt="Pulsera Elegante">
-        <h3>Pulsera Elegante</h3>
-        <p>Pulsera de perlas y dijes plateados.</p>
-        <span>$15.000</span>
+    <div class="producto-container">
+      <img class="producto-imagen" src="https://github.com/Papoveda/lalupulseras/raw/principal/media/pulseras.jpg" alt="Pulsera Rosa">
+      <div class="producto-nombre">Pulsera Rosa</div>
+      <div class="producto-descripcion">
+        Pulsera artesanal con detalles en rosa y dorado. Ideal para cualquier ocasión especial o para regalar.
       </div>
-      <div class="producto">
-        <img src="pulsera2.jpg" alt="Pulsera Colorida">
-        <h3>Pulsera Colorida</h3>
-        <p>Pulsera con cuentas multicolor.</p>
-        <span>$12.000</span>
-      </div>
-      <div class="producto">
-        <img src="pulsera3.jpg" alt="Pulsera Minimalista">
-        <h3>Pulsera Minimalista</h3>
-        <p>Pulsera fina de hilo rojo con dije de corazón.</p>
-        <span>$10.000</span>
-      </div>
-      <!-- Agrega más productos aquí -->
+      <div class="producto-precio">$250 MXN</div>
+      <a href="https://wa.me/5215555555555?text=¡Hola!%20Me%20interesa%20la%20Pulsera%20Rosa%20de%20Lalu%20Pulseras" class="btn-comprar" target="_blank">Comprar ahora</a>
     </div>
   </main>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Pulseras Femeninas. Todos los derechos reservados.</p>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="https://github.com/Papoveda/lalupulseras/raw/principal/media/logo-lalu.png" alt="Lalu Pulseras" style="height:32px;">
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a> |
+        <a href="productos.html">Productos</a> |
+        <a href="personalizados.html">Personalizados</a> |
+        <a href="contacto.html">Contacto</a> |
+        <a href="nosotros.html">Nosotros</a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Lalu Pulseras. Todos los derechos reservados.
+      </div>
+    </div>
   </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/5215555555555?text=¡Hola!%20Me%20interesa%20este%20producto%20de%20Lalu%20Pulseras"
+     class="whatsapp-float" target="_blank" aria-label="Chatea por WhatsApp">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" style="width:44px; height:44px;">
+  </a>
 </body>
 </html>
